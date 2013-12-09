@@ -19,9 +19,4 @@
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
 
-@property (nonatomic, readonly) NSInteger score;
-@property (nonatomic, readonly) NSString *lastMatchStatus;
-@property (nonatomic, readonly) NSString *cardStatus;
-@property (nonatomic, readonly) NSMutableArray *cardHistory;
-
 @end

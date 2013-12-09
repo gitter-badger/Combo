@@ -12,7 +12,7 @@
 
 @synthesize shape = _shape;
 
-- (int)match:(NSArray *)otherCards
+- (BOOL)match:(NSArray *)otherCards
 {
     int rankScore = 0;
     int shapeScore = 0;

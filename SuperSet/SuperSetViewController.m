@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
 
-        // Create the first game
+    // Create the first game
     self.game = [self createGame];
     [self updateUI];
 }

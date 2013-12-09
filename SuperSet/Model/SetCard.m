@@ -1,6 +1,6 @@
 //
 //  SetCard.m
-//  Matchismo
+//  SuperSet
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2013 Craig Maynard. All rights reserved.
@@ -41,16 +41,6 @@
 
     BOOL matched = (rankScore % 3 == 0) && (shapeScore % 3 == 0) && (colorScore % 3 == 0) && (shadingScore % 3 == 0);
     return matched;
-}
-
-- (NSString *)contents
-{
-    NSString *contents = self.shape;
-    for (int i = 1; i < self.rank; i++) {
-        contents = [contents stringByAppendingString:self.shape];
-    }
-
-    return contents;
 }
 
 + (NSUInteger) maxRank

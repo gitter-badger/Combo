@@ -1,0 +1,109 @@
+//
+//  SetCard.m
+//  Matchismo
+//
+//  Created by Craig Maynard on 11/24/13.
+//  Copyright (c) 2013 Craig Maynard. All rights reserved.
+//
+
+#import "SetCard.h"
+
+@implementation SetCard
+
+@synthesize shape = _shape;
+
+- (int)match:(NSArray *)otherCards
+{
+    int rankScore = 0;
+    int shapeScore = 0;
+    int colorScore = 0;
+    int shadingScore = 0;
+
+    SetCard *card1 = self;
+    SetCard *card2 = otherCards[0];
+    SetCard *card3 = otherCards[1];
+
+    if (card1.rank == card2.rank) { rankScore++; }
+    if (card1.rank == card3.rank) { rankScore++; }
+    if (card2.rank == card3.rank) { rankScore++; }
+
+    if ([card1.shape isEqualToString:card2.shape]) { shapeScore++; }
+    if ([card1.shape isEqualToString:card3.shape]) { shapeScore++; }
+    if ([card2.shape isEqualToString:card3.shape]) { shapeScore++; }
+
+    if ([card1.color isEqualToString:card2.color]) { colorScore++; }
+    if ([card1.color isEqualToString:card3.color]) { colorScore++; }
+    if ([card2.color isEqualToString:card3.color]) { colorScore++; }
+
+    if ([card1.shading isEqualToString:card2.shading]) { shadingScore++; }
+    if ([card1.shading isEqualToString:card3.shading]) { shadingScore++; }
+    if ([card2.shading isEqualToString:card3.shading]) { shadingScore++; }
+
+    BOOL matched = (rankScore % 3 == 0) && (shapeScore % 3 == 0) && (colorScore % 3 == 0) && (shadingScore % 3 == 0);
+    return matched;
+}
+
+- (NSString *)contents
+{
+    NSString *contents = self.shape;
+    for (int i = 1; i < self.rank; i++) {
+        contents = [contents stringByAppendingString:self.shape];
+    }
+
+    return contents;
+}
+
++ (NSUInteger) maxRank
+{
+    return 3;
+}
+
++ (NSArray *)validShapes
+{
+    return @[@"diamond", @"rectangle", @"oval"];
+}
+
++ (NSArray *)validColors
+{
+    return @[@"red", @"green", @"blue"];
+}
+
++ (NSArray *)validShadings
+{
+    return @[@"solid", @"striped", @"open"];
+}
+
+- (void)setRank:(NSUInteger)rank
+{
+    if (rank >= 1 && rank <= 3) {
+        _rank = rank;
+    }
+}
+
+- (void)setShape:(NSString *)shape
+{
+    if ([[SetCard validShapes] containsObject:shape]) {
+        _shape = shape;
+    }
+}
+
+- (void) setColor:(NSString *)color
+{
+    if ([[SetCard validColors] containsObject:color]) {
+        _color = color;
+    }
+}
+
+- (void) setShading:(NSString *)shading
+{
+    if ([[SetCard validShadings] containsObject:shading]) {
+        _shading = shading;
+    }
+}
+
+- (NSString *)shape
+{
+    return _shape ? _shape : @"?";
+}
+
+@end

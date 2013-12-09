@@ -15,13 +15,20 @@
 		44C233EE1853C8A7004544D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C233ED1853C8A7004544D2 /* AppDelegate.m */; };
 		44C233F11853C8A7004544D2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C233EF1853C8A7004544D2 /* Main_iPhone.storyboard */; };
 		44C233F41853C8A7004544D2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C233F21853C8A7004544D2 /* Main_iPad.storyboard */; };
-		44C233F71853C8A7004544D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C233F61853C8A7004544D2 /* ViewController.m */; };
 		44C233F91853C8A7004544D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C233F81853C8A7004544D2 /* Images.xcassets */; };
 		44C234001853C8A7004544D2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233FF1853C8A7004544D2 /* XCTest.framework */; };
 		44C234011853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
 		44C234021853C8A7004544D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233E11853C8A7004544D2 /* UIKit.framework */; };
 		44C2340A1853C8A7004544D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C234081853C8A7004544D2 /* InfoPlist.strings */; };
 		44C2340C1853C8A7004544D2 /* SuperSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2340B1853C8A7004544D2 /* SuperSetTests.m */; };
+		44C2341E1853CC9B004544D2 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234181853CC9B004544D2 /* SetCardView.m */; };
+		44C234201853CC9B004544D2 /* SuperSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2341C1853CC9B004544D2 /* SuperSetViewController.m */; };
+		44C2342C1853CCBB004544D2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234231853CCBB004544D2 /* Card.m */; };
+		44C2342D1853CCBB004544D2 /* CardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234251853CCBB004544D2 /* CardDeck.m */; };
+		44C2342E1853CCBB004544D2 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234271853CCBB004544D2 /* CardMatchingGame.m */; };
+		44C2342F1853CCBB004544D2 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234291853CCBB004544D2 /* SetCard.m */; };
+		44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2342B1853CCBB004544D2 /* SetCardDeck.m */; };
+		44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +54,28 @@
 		44C233ED1853C8A7004544D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		44C233F01853C8A7004544D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		44C233F31853C8A7004544D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		44C233F51853C8A7004544D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		44C233F61853C8A7004544D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		44C233F81853C8A7004544D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44C233FE1853C8A7004544D2 /* SuperSetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperSetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233FF1853C8A7004544D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		44C234071853C8A7004544D2 /* SuperSetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuperSetTests-Info.plist"; sourceTree = "<group>"; };
 		44C234091853C8A7004544D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44C2340B1853C8A7004544D2 /* SuperSetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperSetTests.m; sourceTree = "<group>"; };
+		44C234171853CC9B004544D2 /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
+		44C234181853CC9B004544D2 /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardView.m; sourceTree = "<group>"; };
+		44C2341B1853CC9B004544D2 /* SuperSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSetViewController.h; sourceTree = "<group>"; };
+		44C2341C1853CC9B004544D2 /* SuperSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperSetViewController.m; sourceTree = "<group>"; };
+		44C234221853CCBB004544D2 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		44C234231853CCBB004544D2 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		44C234241853CCBB004544D2 /* CardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDeck.h; sourceTree = "<group>"; };
+		44C234251853CCBB004544D2 /* CardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDeck.m; sourceTree = "<group>"; };
+		44C234261853CCBB004544D2 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		44C234271853CCBB004544D2 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
+		44C234281853CCBB004544D2 /* SetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCard.h; sourceTree = "<group>"; };
+		44C234291853CCBB004544D2 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCard.m; sourceTree = "<group>"; };
+		44C2342A1853CCBB004544D2 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardDeck.h; sourceTree = "<group>"; };
+		44C2342B1853CCBB004544D2 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardDeck.m; sourceTree = "<group>"; };
+		44C2343118551F03004544D2 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; };
+		44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +135,15 @@
 		44C233E31853C8A7004544D2 /* SuperSet */ = {
 			isa = PBXGroup;
 			children = (
-				44C233EC1853C8A7004544D2 /* AppDelegate.h */,
-				44C233ED1853C8A7004544D2 /* AppDelegate.m */,
+				44C234211853CCBB004544D2 /* Model */,
+				44C234171853CC9B004544D2 /* SetCardView.h */,
+				44C234181853CC9B004544D2 /* SetCardView.m */,
+				44C2343118551F03004544D2 /* SetCardCollectionViewCell.h */,
+				44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */,
+				44C2341B1853CC9B004544D2 /* SuperSetViewController.h */,
+				44C2341C1853CC9B004544D2 /* SuperSetViewController.m */,
 				44C233EF1853C8A7004544D2 /* Main_iPhone.storyboard */,
 				44C233F21853C8A7004544D2 /* Main_iPad.storyboard */,
-				44C233F51853C8A7004544D2 /* ViewController.h */,
-				44C233F61853C8A7004544D2 /* ViewController.m */,
 				44C233F81853C8A7004544D2 /* Images.xcassets */,
 				44C233E41853C8A7004544D2 /* Supporting Files */,
 			);
@@ -129,6 +153,8 @@
 		44C233E41853C8A7004544D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44C233EC1853C8A7004544D2 /* AppDelegate.h */,
+				44C233ED1853C8A7004544D2 /* AppDelegate.m */,
 				44C233E51853C8A7004544D2 /* SuperSet-Info.plist */,
 				44C233E61853C8A7004544D2 /* InfoPlist.strings */,
 				44C233E91853C8A7004544D2 /* main.m */,
@@ -153,6 +179,23 @@
 				44C234081853C8A7004544D2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44C234211853CCBB004544D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44C234221853CCBB004544D2 /* Card.h */,
+				44C234231853CCBB004544D2 /* Card.m */,
+				44C234241853CCBB004544D2 /* CardDeck.h */,
+				44C234251853CCBB004544D2 /* CardDeck.m */,
+				44C234261853CCBB004544D2 /* CardMatchingGame.h */,
+				44C234271853CCBB004544D2 /* CardMatchingGame.m */,
+				44C234281853CCBB004544D2 /* SetCard.h */,
+				44C234291853CCBB004544D2 /* SetCard.m */,
+				44C2342A1853CCBB004544D2 /* SetCardDeck.h */,
+				44C2342B1853CCBB004544D2 /* SetCardDeck.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,9 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C233F71853C8A7004544D2 /* ViewController.m in Sources */,
+				44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */,
 				44C233EE1853C8A7004544D2 /* AppDelegate.m in Sources */,
+				44C2341E1853CC9B004544D2 /* SetCardView.m in Sources */,
+				44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */,
+				44C2342E1853CCBB004544D2 /* CardMatchingGame.m in Sources */,
+				44C2342F1853CCBB004544D2 /* SetCard.m in Sources */,
 				44C233EA1853C8A7004544D2 /* main.m in Sources */,
+				44C2342C1853CCBB004544D2 /* Card.m in Sources */,
+				44C2342D1853CCBB004544D2 /* CardDeck.m in Sources */,
+				44C234201853CC9B004544D2 /* SuperSetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +524,7 @@
 				44C234111853C8A7004544D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44C234121853C8A7004544D2 /* Build configuration list for PBXNativeTarget "SuperSetTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +533,7 @@
 				44C234141853C8A7004544D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

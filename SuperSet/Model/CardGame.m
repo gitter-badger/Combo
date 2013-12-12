@@ -1,16 +1,16 @@
 //
-//  CardMatchingGame.m
+//  CardGame.m
 //  SuperSet
 //
 //  Created by Craig Maynard on 11/16/13.
 //  Copyright (c) 2013 Craig Maynard. All rights reserved.
 //
 
-#import "CardMatchingGame.h"
+#import "CardGame.h"
 #import "Card.h"
 #import "CardDeck.h"
 
-@interface CardMatchingGame ()
+@interface CardGame ()
 
 @property (nonatomic, readwrite) NSUInteger cardsToMatch;
 @property (nonatomic, strong) CardDeck *deck;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation CardMatchingGame
+@implementation CardGame
 
 - (instancetype)initWithNumberOfCardsToMatch:(NSUInteger)cardsToMatch
                                usingCardDeck:(CardDeck *)deck

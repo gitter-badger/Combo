@@ -8,7 +8,7 @@
 
 #import "SuperSetViewController.h"
 #import "Card.h"
-#import "CardMatchingGame.h"
+#import "CardGame.h"
 #import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
@@ -16,7 +16,7 @@
 
 @interface SuperSetViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) CardMatchingGame *game;
+@property (nonatomic, strong) CardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -36,7 +36,7 @@
     [self updateUI];
 }
 
-- (CardMatchingGame *)game
+- (CardGame *)game
 {
     if (!_game) {
         _game = [self createGame];
@@ -62,9 +62,9 @@
     }
 }
 
-- (CardMatchingGame *)createGame
+- (CardGame *)createGame
 {
-    return [[CardMatchingGame alloc] initWithNumberOfCardsToMatch:3 usingCardDeck:[self createDeck]];
+    return [[CardGame alloc] initWithNumberOfCardsToMatch:3 usingCardDeck:[self createDeck]];
 }
 
 - (CardDeck *)createDeck

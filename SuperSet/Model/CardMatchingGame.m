@@ -58,8 +58,9 @@
 
 - (NSMutableArray *)chosenCards
 {
-    if (!_chosenCards)
+    if (!_chosenCards) {
         _chosenCards = [[NSMutableArray alloc] init];
+    }
     return _chosenCards;
 }
 

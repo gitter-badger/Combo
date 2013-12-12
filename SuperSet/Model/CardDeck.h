@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Craig Maynard. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @class Card;
 
 @interface CardDeck : NSObject

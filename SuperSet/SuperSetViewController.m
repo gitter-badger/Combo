@@ -7,13 +7,12 @@
 //
 
 #import "SuperSetViewController.h"
-#import "SetCardDeck.h"
-#import "SetCard.h"
 #import "Card.h"
 #import "CardMatchingGame.h"
+#import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
+#import "SetCardDeck.h"
 #import "SetCardView.h"
-
 
 @interface SuperSetViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 

@@ -10,10 +10,13 @@
 
 @interface CardDeck : NSObject
 
+@property (nonatomic, strong) NSArray *cardDeck;
+
 - (void)addCard:(Card *)card atTop:(BOOL)atTop;
 - (void)addCard:(Card *)card;
 
 - (Card *)drawRandomCard;
 - (NSUInteger)cardCount;
+- (Card *)cardAtIndex:(NSUInteger)index;
 
 @end

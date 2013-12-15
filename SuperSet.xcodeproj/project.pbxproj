@@ -25,7 +25,7 @@
 		44C234201853CC9B004544D2 /* SuperSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2341C1853CC9B004544D2 /* SuperSetViewController.m */; };
 		44C2342C1853CCBB004544D2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234231853CCBB004544D2 /* Card.m */; };
 		44C2342D1853CCBB004544D2 /* CardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234251853CCBB004544D2 /* CardDeck.m */; };
-		44C2342E1853CCBB004544D2 /* CardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234271853CCBB004544D2 /* CardGame.m */; };
+		44C2342E1853CCBB004544D2 /* SetCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234271853CCBB004544D2 /* SetCardGame.m */; };
 		44C2342F1853CCBB004544D2 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234291853CCBB004544D2 /* SetCard.m */; };
 		44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2342B1853CCBB004544D2 /* SetCardDeck.m */; };
 		44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */; };
@@ -68,8 +68,8 @@
 		44C234231853CCBB004544D2 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		44C234241853CCBB004544D2 /* CardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDeck.h; sourceTree = "<group>"; };
 		44C234251853CCBB004544D2 /* CardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDeck.m; sourceTree = "<group>"; };
-		44C234261853CCBB004544D2 /* CardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CardGame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		44C234271853CCBB004544D2 /* CardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CardGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		44C234261853CCBB004544D2 /* SetCardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardGame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		44C234271853CCBB004544D2 /* SetCardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		44C234281853CCBB004544D2 /* SetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCard.h; sourceTree = "<group>"; };
 		44C234291853CCBB004544D2 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCard.m; sourceTree = "<group>"; };
 		44C2342A1853CCBB004544D2 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardDeck.h; sourceTree = "<group>"; };
@@ -188,12 +188,12 @@
 				44C234231853CCBB004544D2 /* Card.m */,
 				44C234241853CCBB004544D2 /* CardDeck.h */,
 				44C234251853CCBB004544D2 /* CardDeck.m */,
-				44C234261853CCBB004544D2 /* CardGame.h */,
-				44C234271853CCBB004544D2 /* CardGame.m */,
 				44C234281853CCBB004544D2 /* SetCard.h */,
 				44C234291853CCBB004544D2 /* SetCard.m */,
 				44C2342A1853CCBB004544D2 /* SetCardDeck.h */,
 				44C2342B1853CCBB004544D2 /* SetCardDeck.m */,
+				44C234261853CCBB004544D2 /* SetCardGame.h */,
+				44C234271853CCBB004544D2 /* SetCardGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				44C233EE1853C8A7004544D2 /* AppDelegate.m in Sources */,
 				44C2341E1853CC9B004544D2 /* SetCardView.m in Sources */,
 				44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */,
-				44C2342E1853CCBB004544D2 /* CardGame.m in Sources */,
+				44C2342E1853CCBB004544D2 /* SetCardGame.m in Sources */,
 				44C2342F1853CCBB004544D2 /* SetCard.m in Sources */,
 				44C233EA1853C8A7004544D2 /* main.m in Sources */,
 				44C2342C1853CCBB004544D2 /* Card.m in Sources */,

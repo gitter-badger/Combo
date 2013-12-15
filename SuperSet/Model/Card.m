@@ -10,10 +10,4 @@
 
 @implementation Card
 
-// abstract
-- (BOOL)match:(NSArray *)otherCards
-{
-    return NO;
-}
-
 @end

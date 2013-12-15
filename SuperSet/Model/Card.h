@@ -11,7 +11,12 @@
 @property (nonatomic, getter = isChosen) BOOL chosen;
 @property (nonatomic, getter = isMatched) BOOL matched;
 
-// subclasses should override
-- (BOOL)match:(NSArray *)otherCards;
+@end
+
+@protocol CardProtocol <NSObject>
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
++ (BOOL)match:(NSArray *)cards;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "Card.h"
 
-@interface SetCard : Card
+@interface SetCard : Card <CardProtocol>
 
 @property (nonatomic, assign) NSUInteger rank;
 @property (strong, nonatomic) NSString *shape;

@@ -15,6 +15,11 @@
 
 @implementation CardDeck
 
+- (Card *)cardAtIndex:(NSUInteger)index
+{
+    return self.cards[index];
+}
+
 - (NSUInteger)cardCount
 {
     return [self.cards count];
@@ -55,6 +60,23 @@
     }
 
     return randomCard;
+}
+
+- (NSArray *)cardDeck
+{
+    NSMutableArray *array = [NSMutableArray array];
+
+    for (id card in self.cards) {
+        NSUInteger index = [self.cards indexOfObject:card];
+        array[index] = [card dictionary];
+    }
+
+    return array;
+}
+
+- (void)setCardDeck:(NSArray *)cardDeck
+{
+    
 }
 
 @end

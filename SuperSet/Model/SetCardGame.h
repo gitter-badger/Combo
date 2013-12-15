@@ -1,5 +1,5 @@
 //
-//  CardGame.h
+//  SetCardGame.h
 //  SuperSet
 //
 //  Created by Craig Maynard on 11/16/13.
@@ -8,11 +8,10 @@
 
 @class Card, CardDeck;
 
-@interface CardGame : NSObject
+@interface SetCardGame : NSObject
 
 // designated initializer
-- (instancetype)initWithNumberOfCardsToMatch:(NSUInteger)cardsToMatch
-                               usingCardDeck:(CardDeck *)deck;
+- (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck;
 
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;

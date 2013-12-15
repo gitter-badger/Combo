@@ -12,16 +12,33 @@
 
 @synthesize shape = _shape;
 
-- (BOOL)match:(NSArray *)otherCards
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+    if (self = [super init]) {
+        self.rank = [[dictionary objectForKey:@"rank"] integerValue];
+        self.shape = [dictionary objectForKey:@"shape"];
+        self.color = [dictionary objectForKey:@"color"];
+        self.shading = [dictionary objectForKey:@"shading"];
+    }
+
+    return self;
+}
+
+- (NSDictionary *)dictionary
+{
+    return @{ @"rank" : [NSNumber numberWithInteger:self.rank], @"shape" : self.shape, @"color" : self.color, @"shading" : self.shading };
+}
+
++ (BOOL)match:(NSArray *)cards
 {
     int rankScore = 0;
     int shapeScore = 0;
     int colorScore = 0;
     int shadingScore = 0;
 
-    SetCard *card1 = self;
-    SetCard *card2 = otherCards[0];
-    SetCard *card3 = otherCards[1];
+    SetCard *card1 = cards[0];
+    SetCard *card2 = cards[1];
+    SetCard *card3 = cards[2];
 
     if (card1.rank == card2.rank) { rankScore++; }
     if (card1.rank == card3.rank) { rankScore++; }

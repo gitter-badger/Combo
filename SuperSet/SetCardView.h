@@ -12,5 +12,6 @@
 @property (strong, nonatomic) NSString *shape;
 @property (strong, nonatomic) NSString *color;
 @property (strong, nonatomic) NSString *shading;
+@property (strong, nonatomic) UIColor *fillColor;
 
 @end

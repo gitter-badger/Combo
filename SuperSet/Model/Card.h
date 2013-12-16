@@ -13,6 +13,7 @@
 
 @end
 
+// subclasses should implement this protocol
 @protocol CardProtocol <NSObject>
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;

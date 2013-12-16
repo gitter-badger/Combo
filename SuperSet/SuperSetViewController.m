@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) SetCardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *singleTapGesture;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *doubleTapGesture;
 
 @end
 
@@ -34,6 +36,8 @@
     // Create the first game
     self.game = [self createGame];
     [self updateUI];
+
+    // [self.singleTapGesture requireGestureRecognizerToFail:self.doubleTapGesture];
 }
 
 - (SetCardGame *)game
@@ -52,12 +56,21 @@
     [self updateUI];
 }
 
-- (IBAction)tapCard:(UITapGestureRecognizer *)gesture
+- (IBAction)singleTap:(UITapGestureRecognizer *)gesture
 {
     CGPoint tapLocation = [gesture locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:tapLocation];
     if (indexPath) {
         [self.game chooseCardAtIndex:indexPath.item];
+        [self updateUI];
+    }
+}
+
+- (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
+{
+    CGPoint tapLocation = [gesture locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:tapLocation];
+    if (indexPath) {
         [self updateUI];
     }
 }
@@ -74,9 +87,9 @@
 
 - (void)updateUI
 {
-    for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
+    for (SetCardCollectionViewCell *cell in [self.collectionView visibleCells]) {
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-        Card *card = [self.game cardAtIndex:indexPath.item];
+        SetCard *card = [self.game cardAtIndex:indexPath.item];
         [self updateCell:cell usingCard:card];
     }
 }
@@ -90,26 +103,21 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SetCard" forIndexPath:indexPath];
-    Card *card = [self.game cardAtIndex:indexPath.item];
+    SetCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SetCard" forIndexPath:indexPath];
+    SetCard *card = [self.game cardAtIndex:indexPath.item];
     [self updateCell:cell usingCard:card];
 
     return cell;
 }
 
-- (void)updateCell:(UICollectionViewCell *)cell usingCard:(Card *)card
+- (void)updateCell:(SetCardCollectionViewCell *)cell usingCard:(SetCard *)card
 {
-     if ([cell isKindOfClass:[SetCardCollectionViewCell class]]) {
-        SetCardView *cardView = ((SetCardCollectionViewCell *)cell).cardView;
-        if ([card isKindOfClass:[SetCard class]]) {
-            SetCard *setCard = (SetCard *)card;
-            cardView.rank = setCard.rank;
-            cardView.shape = setCard.shape;
-            cardView.color = setCard.color;
-            cardView.shading = setCard.shading;
-            cardView.hidden = setCard.isMatched;
-        }
-    }
+    cell.cardView.rank = card.rank;
+    cell.cardView.shape = card.shape;
+    cell.cardView.color = card.color;
+    cell.cardView.shading = card.shading;
+    cell.cardView.fillColor = card.isChosen ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
+    cell.cardView.hidden = card.isMatched;
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import "SetCard.h"
 
+@interface SetCard ()
+@end
+
 @implementation SetCard
 
 @synthesize shape = _shape;

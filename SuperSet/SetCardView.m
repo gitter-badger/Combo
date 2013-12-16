@@ -36,6 +36,12 @@
     [self setNeedsDisplay];
 }
 
+- (void)setFillColor:(UIColor *)fillColor
+{
+    _fillColor = fillColor;
+    [self setNeedsDisplay];
+}
+
 #pragma mark - Drawing
 
 #define STANDARD_HEIGHT 210.0
@@ -50,7 +56,7 @@
 
     [roundedRect addClip];
 
-    [[UIColor whiteColor] setFill];
+    [self.fillColor setFill];
     UIRectFill(self.bounds);
 
     [[UIColor blackColor] setStroke];

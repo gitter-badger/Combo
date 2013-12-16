@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Craig Maynard. All rights reserved.
 //
 
-@class Card, CardDeck;
+@class SetCard, CardDeck;
 
 @interface SetCardGame : NSObject
 
@@ -14,6 +14,6 @@
 - (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck;
 
 - (void)chooseCardAtIndex:(NSUInteger)index;
-- (Card *)cardAtIndex:(NSUInteger)index;
+- (SetCard *)cardAtIndex:(NSUInteger)index;
 
 @end

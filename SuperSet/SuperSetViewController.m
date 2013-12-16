@@ -18,8 +18,7 @@
 
 @property (nonatomic, strong) SetCardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *singleTapGesture;
-@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *doubleTapGesture;
+@property (nonatomic) BOOL showHint;
 
 @end
 
@@ -36,8 +35,6 @@
     // Create the first game
     self.game = [self createGame];
     [self updateUI];
-
-    // [self.singleTapGesture requireGestureRecognizerToFail:self.doubleTapGesture];
 }
 
 - (SetCardGame *)game
@@ -61,18 +58,16 @@
     CGPoint tapLocation = [gesture locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:tapLocation];
     if (indexPath) {
+        self.showHint = NO;
         [self.game chooseCardAtIndex:indexPath.item];
         [self updateUI];
     }
 }
 
-- (IBAction)doubleTap:(UITapGestureRecognizer *)gesture
+- (IBAction)swipe:(UISwipeGestureRecognizer *)gesture
 {
-    CGPoint tapLocation = [gesture locationInView:self.collectionView];
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:tapLocation];
-    if (indexPath) {
-        [self updateUI];
-    }
+    self.showHint = YES;
+    [self updateUI];
 }
 
 - (SetCardGame *)createGame
@@ -116,8 +111,14 @@
     cell.cardView.shape = card.shape;
     cell.cardView.color = card.color;
     cell.cardView.shading = card.shading;
-    cell.cardView.fillColor = card.isChosen ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
     cell.cardView.hidden = card.isMatched;
+
+    if (self.showHint) {
+        cell.cardView.fillColor = card.canMatch ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
+    }
+    else {
+        cell.cardView.fillColor = card.isChosen ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
+    }
 }
 
 @end

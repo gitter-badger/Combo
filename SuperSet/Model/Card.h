@@ -8,8 +8,10 @@
 
 @interface Card : NSObject
 
+@property (nonatomic, getter = isNew) BOOL new;
 @property (nonatomic, getter = isChosen) BOOL chosen;
 @property (nonatomic, getter = isMatched) BOOL matched;
+@property (nonatomic) BOOL canMatch;
 
 @end
 

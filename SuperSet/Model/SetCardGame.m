@@ -37,11 +37,12 @@
 - (void)dealCards
 {
     for (int i = 0; i < self.cardCount; i++) {
-        Card *card = [self.cardsInPlay objectAtIndex:i];
-        if (card.isMatched) {
-            card = [self.cards firstObject];
-            if (card) {
-                [self.cardsInPlay replaceObjectAtIndex:i withObject:card];
+        Card *card = self.cardsInPlay[i];
+        if (card.isNew || card.isMatched) {
+            Card *newCard = [self.cards firstObject];
+            if (newCard) {
+                newCard.new = YES;
+                self.cardsInPlay[i] = newCard;
                 [self.cards removeObjectAtIndex:0];
             }
         }
@@ -69,15 +70,18 @@
 - (NSMutableArray *)cardsInPlay
 {
     if (!_cardsInPlay) {
+
         _cardsInPlay = [[NSMutableArray alloc] init];
 
-        for (int i = 0; i < self.cardCount; i++) {
-            Card *card = [self.cards firstObject];
-            if (card) {
-                [self.cardsInPlay insertObject:card atIndex:i];
-                [self.cards removeObjectAtIndex:0];
+        do {
+            for (int i = 0; i < self.cardCount; i++) {
+                Card *card = [self.cards firstObject];
+                if (card) {
+                    self.cardsInPlay[i] = card;
+                    [self.cards removeObjectAtIndex:0];
+                }
             }
-        }
+        } while (![self containsSet]);
     }
 
     return _cardsInPlay;
@@ -115,7 +119,8 @@
                     for (Card *chosenCard in self.chosenCards) {
                         chosenCard.matched = YES;
                     }
-                    [self dealCards];
+                    do { [self dealCards]; } while (![self containsSet]);
+                    for (Card *card in self.cardsInPlay) { card.new = NO; }
                 }
 
                 for (Card *chosenCard in self.chosenCards) {
@@ -128,15 +133,20 @@
     }
 }
 
-- (BOOL)containsSet:(NSArray *)cards
+- (BOOL)containsSet
 {
+    for (Card *card in self.cardsInPlay) { card.canMatch = NO; }
     for (int i = 0; i < self.cardCount; i++) {
         for (int j = i + 1; j < self.cardCount; j++) {
             for (int k = j + 1; k < self.cardCount; k++) {
-                Card *card1 = [self.cards objectAtIndex:i];
-                Card *card2 = [self.cards objectAtIndex:j];
-                Card *card3 = [self.cards objectAtIndex:k];
-                if ([SetCard match:@[card1, card2, card3]]) {
+                Card *card1 = self.cardsInPlay[i];
+                Card *card2 = self.cardsInPlay[j];
+                Card *card3 = self.cardsInPlay[k];
+                BOOL matched = [SetCard match:@[card1, card2, card3]];
+                if (matched) {
+                    card1.canMatch = YES;
+                    card2.canMatch = YES;
+                    card3.canMatch = YES;
                     return YES;
                 }
             }

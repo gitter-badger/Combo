@@ -65,13 +65,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="DoH-oM-6ra" appends="YES" id="4IH-On-ZvH"/>
+                            <outletCollection property="gestureRecognizers" destination="yd1-Ut-y9Q" appends="YES" id="FSf-ch-t73"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EGk-F6-tiX" id="dlp-io-5DE"/>
-                        <outlet property="doubleTapGesture" destination="DoH-oM-6ra" id="Gzr-6A-zcr"/>
-                        <outlet property="singleTapGesture" destination="hCX-84-4gc" id="5vf-MJ-cI9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6g-8E-Ya4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,11 +78,11 @@
                         <action selector="singleTap:" destination="Srb-0V-3CJ" id="ZeO-or-B8E"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="DoH-oM-6ra" userLabel="Double Tap Gesture Recognizer">
+                <swipeGestureRecognizer direction="right" id="yd1-Ut-y9Q">
                     <connections>
-                        <action selector="doubleTap:" destination="Srb-0V-3CJ" id="z6s-9c-wKD"/>
+                        <action selector="swipe:" destination="Srb-0V-3CJ" id="JYt-2i-Wbz"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-276" y="101"/>
         </scene>

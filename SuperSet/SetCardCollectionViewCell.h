@@ -11,5 +11,6 @@
 @interface SetCardCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet SetCardView *cardView;
+@property (nonatomic) BOOL animating;
 
 @end

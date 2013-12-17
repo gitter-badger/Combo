@@ -161,6 +161,7 @@
 
 - (void)setup
 {
+    self.fillColor = [UIColor whiteColor];
     self.backgroundColor = nil;
     self.opaque = NO;
     self.contentMode = UIViewContentModeRedraw;

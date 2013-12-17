@@ -1,20 +1,22 @@
 //
-//  SuperSetViewController.m
+//  SetCardGameViewController.m
 //  SuperSet
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2013 Craig Maynard. All rights reserved.
 //
 
-#import "SuperSetViewController.h"
+#import "SetCardGameViewController.h"
 #import "Card.h"
 #import "SetCardGame.h"
 #import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
 #import "SetCardView.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface SuperSetViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) SetCardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -22,7 +24,7 @@
 
 @end
 
-@implementation SuperSetViewController
+@implementation SetCardGameViewController
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -114,11 +116,51 @@
     cell.cardView.hidden = card.isMatched;
 
     if (self.showHint) {
-        cell.cardView.fillColor = card.canMatch ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
+        if (card.canMatch) {
+            [self startAnimationWithCell:cell];
+        }
+    }
+    else if (card.isChosen) {
+        [self startAnimationWithCell:cell];
     }
     else {
-        cell.cardView.fillColor = card.isChosen ? [UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1] : [UIColor whiteColor];
+        [self stopAnimationWithCell:cell];
     }
+}
+
+- (void)startAnimationWithCell:(SetCardCollectionViewCell *)cell
+{
+    if (cell.animating) return;
+    cell.animating = YES;
+
+    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut |
+                                     UIViewAnimationOptionAutoreverse |
+                                     UIViewAnimationOptionRepeat |
+                                     UIViewAnimationOptionAllowUserInteraction;
+
+    CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.95, 0.95);
+
+    [UIView animateWithDuration:0.25
+                          delay:0
+                        options:options
+                     animations:^{ cell.cardView.transform = transform; }
+                     completion:NULL];
+}
+
+- (void)stopAnimationWithCell:(SetCardCollectionViewCell *)cell
+{
+    if (!cell.animating) return;
+    cell.animating = NO;
+
+    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState;
+
+    CGAffineTransform transform = CGAffineTransformIdentity;
+
+    [UIView animateWithDuration:0.1
+                          delay:0
+                        options:options
+                     animations:^{ cell.cardView.transform = transform; }
+                     completion:NULL];
 }
 
 @end

@@ -22,7 +22,7 @@
 		44C2340A1853C8A7004544D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C234081853C8A7004544D2 /* InfoPlist.strings */; };
 		44C2340C1853C8A7004544D2 /* SuperSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2340B1853C8A7004544D2 /* SuperSetTests.m */; };
 		44C2341E1853CC9B004544D2 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234181853CC9B004544D2 /* SetCardView.m */; };
-		44C234201853CC9B004544D2 /* SuperSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2341C1853CC9B004544D2 /* SuperSetViewController.m */; };
+		44C234201853CC9B004544D2 /* SetCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2341C1853CC9B004544D2 /* SetCardGameViewController.m */; };
 		44C2342C1853CCBB004544D2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234231853CCBB004544D2 /* Card.m */; };
 		44C2342D1853CCBB004544D2 /* CardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234251853CCBB004544D2 /* CardDeck.m */; };
 		44C2342E1853CCBB004544D2 /* SetCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234271853CCBB004544D2 /* SetCardGame.m */; };
@@ -62,8 +62,8 @@
 		44C2340B1853C8A7004544D2 /* SuperSetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperSetTests.m; sourceTree = "<group>"; };
 		44C234171853CC9B004544D2 /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
 		44C234181853CC9B004544D2 /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardView.m; sourceTree = "<group>"; };
-		44C2341B1853CC9B004544D2 /* SuperSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSetViewController.h; sourceTree = "<group>"; };
-		44C2341C1853CC9B004544D2 /* SuperSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SuperSetViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		44C2341B1853CC9B004544D2 /* SetCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		44C2341C1853CC9B004544D2 /* SetCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardGameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		44C234221853CCBB004544D2 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		44C234231853CCBB004544D2 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		44C234241853CCBB004544D2 /* CardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDeck.h; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				44C234181853CC9B004544D2 /* SetCardView.m */,
 				44C2343118551F03004544D2 /* SetCardCollectionViewCell.h */,
 				44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */,
-				44C2341B1853CC9B004544D2 /* SuperSetViewController.h */,
-				44C2341C1853CC9B004544D2 /* SuperSetViewController.m */,
+				44C2341B1853CC9B004544D2 /* SetCardGameViewController.h */,
+				44C2341C1853CC9B004544D2 /* SetCardGameViewController.m */,
 				44C233EF1853C8A7004544D2 /* Main_iPhone.storyboard */,
 				44C233F21853C8A7004544D2 /* Main_iPad.storyboard */,
 				44C233F81853C8A7004544D2 /* Images.xcassets */,
@@ -305,7 +305,7 @@
 				44C233EA1853C8A7004544D2 /* main.m in Sources */,
 				44C2342C1853CCBB004544D2 /* Card.m in Sources */,
 				44C2342D1853CCBB004544D2 /* CardDeck.m in Sources */,
-				44C234201853CC9B004544D2 /* SuperSetViewController.m in Sources */,
+				44C234201853CC9B004544D2 /* SetCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,10 +16,11 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
 
 @property (nonatomic, strong) SetCardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UIProgressView *progressView;
 @property (nonatomic) BOOL showHint;
 
 @end
@@ -34,25 +35,22 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor blackColor];
+
     // Create the first game
-    self.game = [self createGame];
-    [self updateUI];
+    [self createGame];
 }
 
-- (SetCardGame *)game
+- (void)didFinishGame
 {
-    if (!_game) {
-        _game = [self createGame];
-        [self updateUI];
-    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                    message:@"Awesome!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 
-    return _game;
-}
-
-- (IBAction)newGameButton:(UIButton *)sender
-{
-    self.game = [self createGame];
-    [self updateUI];
+    [self createGame];
 }
 
 - (IBAction)singleTap:(UITapGestureRecognizer *)gesture
@@ -61,8 +59,12 @@
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:tapLocation];
     if (indexPath) {
         self.showHint = NO;
-        [self.game chooseCardAtIndex:indexPath.item];
+        BOOL success = [self.game chooseCardAtIndex:indexPath.item];
         [self updateUI];
+        if (!success) {
+            // match failed
+            [self animateCollection];
+        }
     }
 }
 
@@ -72,9 +74,11 @@
     [self updateUI];
 }
 
-- (SetCardGame *)createGame
+- (void)createGame
 {
-    return [[SetCardGame alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
+    self.game = [[SetCardGame alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
+    self.game.delegate = self;
+    [self updateUI];
 }
 
 - (CardDeck *)createDeck
@@ -89,6 +93,9 @@
         SetCard *card = [self.game cardAtIndex:indexPath.item];
         [self updateCell:cell usingCard:card];
     }
+
+    CGFloat progress = [self.game gameProgress];
+    [self.progressView setProgress:progress animated:YES];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -113,22 +120,26 @@
     cell.cardView.shape = card.shape;
     cell.cardView.color = card.color;
     cell.cardView.shading = card.shading;
-    cell.cardView.hidden = card.isMatched;
+
+    if (card.isMatched) {
+        // no more cards to deal
+        cell.cardView.hidden = YES;
+    }
 
     if (self.showHint) {
         if (card.canMatch) {
-            [self startAnimationWithCell:cell];
+            [self startAnimatingCell:cell];
         }
     }
     else if (card.isChosen) {
-        [self startAnimationWithCell:cell];
+        [self startAnimatingCell:cell];
     }
     else {
-        [self stopAnimationWithCell:cell];
+        [self stopAnimatingCell:cell];
     }
 }
 
-- (void)startAnimationWithCell:(SetCardCollectionViewCell *)cell
+- (void)startAnimatingCell:(SetCardCollectionViewCell *)cell
 {
     if (cell.animating) return;
     cell.animating = YES;
@@ -147,7 +158,7 @@
                      completion:NULL];
 }
 
-- (void)stopAnimationWithCell:(SetCardCollectionViewCell *)cell
+- (void)stopAnimatingCell:(SetCardCollectionViewCell *)cell
 {
     if (!cell.animating) return;
     cell.animating = NO;
@@ -161,6 +172,19 @@
                         options:options
                      animations:^{ cell.cardView.transform = transform; }
                      completion:NULL];
+}
+
+- (void)animateCollection
+{
+    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse;
+
+    CGAffineTransform transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 10, 0);
+
+    [UIView animateWithDuration:0.15
+                          delay:0
+                        options:options
+                     animations:^{ self.collectionView.transform = transform; }
+                     completion:^(BOOL finished){ self.collectionView.transform = CGAffineTransformIdentity; }];
 }
 
 @end

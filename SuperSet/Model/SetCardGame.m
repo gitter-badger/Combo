@@ -29,6 +29,8 @@
     if (self) {
         _cardCount = count;
         _deck = deck;
+
+        [self dealCards];
     }
 
     return self;
@@ -36,17 +38,50 @@
 
 - (void)dealCards
 {
-    for (int i = 0; i < self.cardCount; i++) {
-        Card *card = self.cardsInPlay[i];
-        if (card.isNew || card.isMatched) {
-            Card *newCard = [self.cards firstObject];
-            if (newCard) {
-                newCard.new = YES;
-                self.cardsInPlay[i] = newCard;
+    do {
+        if (![self.cards count]) {
+            return;
+        }
+        for (int i = 0; i < self.cardCount; i++) {
+            Card *card = [self.cards firstObject];
+            if (card) {
+                self.cardsInPlay[i] = card;
                 [self.cards removeObjectAtIndex:0];
             }
         }
+    } while (![self containsSet]);
+}
+
+- (void)replaceCards
+{
+    do {
+        if (![self.cards count]) {
+            return;
+        }
+        for (int i = 0; i < self.cardCount; i++) {
+            Card *card = self.cardsInPlay[i];
+            if (card.isNew || card.isMatched) {
+                Card *newCard = [self.cards firstObject];
+                if (newCard) {
+                    newCard.new = YES;
+                    self.cardsInPlay[i] = newCard;
+                    [self.cards removeObjectAtIndex:0];
+                }
+            }
+        }
+    } while (![self containsSet]);
+
+    for (Card *card in self.cardsInPlay) {
+        card.new = NO;
     }
+    return;
+}
+
+- (CGFloat)gameProgress
+{
+    NSUInteger cardsRemaining = [self.cards count];
+    CGFloat progress = (81.0 - cardsRemaining) / 81.0;
+    return progress;
 }
 
 - (NSMutableArray *)cards
@@ -70,20 +105,8 @@
 - (NSMutableArray *)cardsInPlay
 {
     if (!_cardsInPlay) {
-
         _cardsInPlay = [[NSMutableArray alloc] init];
-
-        do {
-            for (int i = 0; i < self.cardCount; i++) {
-                Card *card = [self.cards firstObject];
-                if (card) {
-                    self.cardsInPlay[i] = card;
-                    [self.cards removeObjectAtIndex:0];
-                }
-            }
-        } while (![self containsSet]);
     }
-
     return _cardsInPlay;
 }
 
@@ -100,9 +123,11 @@
     return self.cardsInPlay[index];
 }
 
-- (void)chooseCardAtIndex:(NSUInteger)index
+- (BOOL)chooseCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
+
+    BOOL success = YES;
 
     if (!card.isMatched) {
         if (card.isChosen) {
@@ -115,12 +140,16 @@
             if ([self.chosenCards count] == 3) {
 
                 // check for match
-                if ([SetCard match:self.chosenCards]) {
+                success = [SetCard match:self.chosenCards];
+                if (success) {
                     for (Card *chosenCard in self.chosenCards) {
                         chosenCard.matched = YES;
                     }
-                    do { [self dealCards]; } while (![self containsSet]);
-                    for (Card *card in self.cardsInPlay) { card.new = NO; }
+                    [self replaceCards];
+                    if (![self containsSet]) {
+                        // game over
+                        [self.delegate didFinishGame];
+                    }
                 }
 
                 for (Card *chosenCard in self.chosenCards) {
@@ -131,6 +160,7 @@
             }
         }
     }
+    return success;
 }
 
 - (BOOL)containsSet
@@ -142,6 +172,7 @@
                 Card *card1 = self.cardsInPlay[i];
                 Card *card2 = self.cardsInPlay[j];
                 Card *card3 = self.cardsInPlay[k];
+                if (card1.isMatched || card2.isMatched || card3.isMatched) continue;
                 BOOL matched = [SetCard match:@[card1, card2, card3]];
                 if (matched) {
                     card1.canMatch = YES;

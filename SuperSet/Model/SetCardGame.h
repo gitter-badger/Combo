@@ -8,12 +8,20 @@
 
 @class SetCard, CardDeck;
 
+@protocol SetCardGameProtocol <NSObject>
+- (void) didFinishGame;
+@end
+
 @interface SetCardGame : NSObject
+
+@property (nonatomic, weak) id<SetCardGameProtocol>delegate;
 
 // designated initializer
 - (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck;
 
-- (void)chooseCardAtIndex:(NSUInteger)index;
+- (BOOL)chooseCardAtIndex:(NSUInteger)index;
 - (SetCard *)cardAtIndex:(NSUInteger)index;
+
+- (CGFloat)gameProgress;
 
 @end

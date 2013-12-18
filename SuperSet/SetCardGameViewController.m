@@ -41,6 +41,18 @@
     [self createGame];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO];
+    [super viewWillDisappear:animated];
+}
+
 - (void)didFinishGame
 {
     [self updateUI];

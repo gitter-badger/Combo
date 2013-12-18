@@ -13,7 +13,7 @@
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
 #import "SetCardView.h"
-#import <QuartzCore/QuartzCore.h>
+#import "MTBlockAlertView.h"
 
 
 @interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
@@ -43,14 +43,11 @@
 
 - (void)didFinishGame
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                    message:@"Awesome!"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    [self updateUI];
 
-    [self createGame];
+    [MTBlockAlertView showWithTitle:@"Game Over"
+                            message:@"Awesome!"
+                    completionBlock:^(UIAlertView *alertView) { [self createGame]; }];
 }
 
 - (IBAction)singleTap:(UITapGestureRecognizer *)gesture

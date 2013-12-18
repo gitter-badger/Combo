@@ -29,6 +29,7 @@
 		44C2342F1853CCBB004544D2 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C234291853CCBB004544D2 /* SetCard.m */; };
 		44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2342B1853CCBB004544D2 /* SetCardDeck.m */; };
 		44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */; };
+		44C6AD6A18618EFD0057E252 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C6AD6918618EFD0057E252 /* MTBlockAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		44C2342B1853CCBB004544D2 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardDeck.m; sourceTree = "<group>"; };
 		44C2343118551F03004544D2 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; };
 		44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; };
+		44C6AD6818618EFD0057E252 /* MTBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBlockAlertView.h; sourceTree = "<group>"; };
+		44C6AD6918618EFD0057E252 /* MTBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 			children = (
 				44C233EC1853C8A7004544D2 /* AppDelegate.h */,
 				44C233ED1853C8A7004544D2 /* AppDelegate.m */,
+				44C6AD6818618EFD0057E252 /* MTBlockAlertView.h */,
+				44C6AD6918618EFD0057E252 /* MTBlockAlertView.m */,
 				44C233E51853C8A7004544D2 /* SuperSet-Info.plist */,
 				44C233E61853C8A7004544D2 /* InfoPlist.strings */,
 				44C233E91853C8A7004544D2 /* main.m */,
@@ -299,6 +304,7 @@
 				44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */,
 				44C233EE1853C8A7004544D2 /* AppDelegate.m in Sources */,
 				44C2341E1853CC9B004544D2 /* SetCardView.m in Sources */,
+				44C6AD6A18618EFD0057E252 /* MTBlockAlertView.m in Sources */,
 				44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */,
 				44C2342E1853CCBB004544D2 /* SetCardGame.m in Sources */,
 				44C2342F1853CCBB004544D2 /* SetCard.m in Sources */,

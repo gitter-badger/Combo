@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *cardsInPlay;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
 
-@property (nonatomic, readwrite) CGFloat deckSizeAfterInitialDeal;
+@property (nonatomic, readwrite) CGFloat cardsToMatch;
 
 @end
 
@@ -33,7 +33,7 @@
         _deck = deck;
 
         [self dealCards];
-        self.deckSizeAfterInitialDeal = [self.cards count];
+        self.cardsToMatch = [self.cards count];
     }
 
     return self;
@@ -83,7 +83,7 @@
 - (CGFloat)gameProgress
 {
     CGFloat cardsRemaining = [self.cards count];
-    CGFloat progress = (self.deckSizeAfterInitialDeal - cardsRemaining) / self.deckSizeAfterInitialDeal;
+    CGFloat progress = (self.cardsToMatch - cardsRemaining) / self.cardsToMatch;
     return progress;
 }
 
@@ -150,7 +150,7 @@
                     }
                     [self replaceCards];
                     if (![self containsSet]) {
-                        // game over
+                        // game over, man
                         [self.delegate didFinishGame];
                     }
                 }

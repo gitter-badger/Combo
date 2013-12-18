@@ -120,11 +120,7 @@
     cell.cardView.shape = card.shape;
     cell.cardView.color = card.color;
     cell.cardView.shading = card.shading;
-
-    if (card.isMatched) {
-        // no more cards to deal
-        cell.cardView.hidden = YES;
-    }
+    cell.cardView.hidden = card.isMatched;
 
     if (self.showHint) {
         if (card.canMatch) {

@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSMutableArray *cardsInPlay;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
 
+@property (nonatomic, readwrite) CGFloat deckSizeAfterInitialDeal;
+
 @end
 
 @implementation SetCardGame
@@ -31,6 +33,7 @@
         _deck = deck;
 
         [self dealCards];
+        self.deckSizeAfterInitialDeal = [self.cards count];
     }
 
     return self;
@@ -79,8 +82,8 @@
 
 - (CGFloat)gameProgress
 {
-    NSUInteger cardsRemaining = [self.cards count];
-    CGFloat progress = (81.0 - cardsRemaining) / 81.0;
+    CGFloat cardsRemaining = [self.cards count];
+    CGFloat progress = (self.deckSizeAfterInitialDeal - cardsRemaining) / self.deckSizeAfterInitialDeal;
     return progress;
 }
 

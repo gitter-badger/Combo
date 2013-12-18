@@ -14,7 +14,6 @@
 		44C233EA1853C8A7004544D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C233E91853C8A7004544D2 /* main.m */; };
 		44C233EE1853C8A7004544D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C233ED1853C8A7004544D2 /* AppDelegate.m */; };
 		44C233F11853C8A7004544D2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C233EF1853C8A7004544D2 /* Main_iPhone.storyboard */; };
-		44C233F41853C8A7004544D2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C233F21853C8A7004544D2 /* Main_iPad.storyboard */; };
 		44C233F91853C8A7004544D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C233F81853C8A7004544D2 /* Images.xcassets */; };
 		44C234001853C8A7004544D2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233FF1853C8A7004544D2 /* XCTest.framework */; };
 		44C234011853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
@@ -30,6 +29,7 @@
 		44C234301853CCBB004544D2 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2342B1853CCBB004544D2 /* SetCardDeck.m */; };
 		44C2343318551F03004544D2 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */; };
 		44C6AD6A18618EFD0057E252 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C6AD6918618EFD0057E252 /* MTBlockAlertView.m */; };
+		44C6AD6D186242480057E252 /* Main_iPhone_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C6AD6B186242480057E252 /* Main_iPhone_4.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		44C233EC1853C8A7004544D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44C233ED1853C8A7004544D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		44C233F01853C8A7004544D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		44C233F31853C8A7004544D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		44C233F81853C8A7004544D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44C233FE1853C8A7004544D2 /* SuperSetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperSetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233FF1853C8A7004544D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -79,6 +78,7 @@
 		44C2343218551F03004544D2 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; };
 		44C6AD6818618EFD0057E252 /* MTBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBlockAlertView.h; sourceTree = "<group>"; };
 		44C6AD6918618EFD0057E252 /* MTBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
+		44C6AD6C186242480057E252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_4.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 				44C2341B1853CC9B004544D2 /* SetCardGameViewController.h */,
 				44C2341C1853CC9B004544D2 /* SetCardGameViewController.m */,
 				44C233EF1853C8A7004544D2 /* Main_iPhone.storyboard */,
-				44C233F21853C8A7004544D2 /* Main_iPad.storyboard */,
+				44C6AD6B186242480057E252 /* Main_iPhone_4.storyboard */,
 				44C233F81853C8A7004544D2 /* Images.xcassets */,
 				44C233E41853C8A7004544D2 /* Supporting Files */,
 			);
@@ -279,7 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C233F41853C8A7004544D2 /* Main_iPad.storyboard in Resources */,
+				44C6AD6D186242480057E252 /* Main_iPhone_4.storyboard in Resources */,
 				44C233F91853C8A7004544D2 /* Images.xcassets in Resources */,
 				44C233F11853C8A7004544D2 /* Main_iPhone.storyboard in Resources */,
 				44C233E81853C8A7004544D2 /* InfoPlist.strings in Resources */,
@@ -350,20 +350,20 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		44C233F21853C8A7004544D2 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44C233F31853C8A7004544D2 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		44C234081853C8A7004544D2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				44C234091853C8A7004544D2 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44C6AD6B186242480057E252 /* Main_iPhone_4.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44C6AD6C186242480057E252 /* Base */,
+			);
+			name = Main_iPhone_4.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -452,6 +452,7 @@
 				GCC_PREFIX_HEADER = "SuperSet/SuperSet-Prefix.pch";
 				INFOPLIST_FILE = "SuperSet/SuperSet-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -465,6 +466,7 @@
 				GCC_PREFIX_HEADER = "SuperSet/SuperSet-Prefix.pch";
 				INFOPLIST_FILE = "SuperSet/SuperSet-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

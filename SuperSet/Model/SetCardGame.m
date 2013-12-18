@@ -151,7 +151,7 @@
                     [self replaceCards];
                     if (![self containsSet]) {
                         // game over, man
-                        [self.delegate didFinishGame];
+                        [self.delegate gameDidFinish];
                     }
                 }
 

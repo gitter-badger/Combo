@@ -53,7 +53,7 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)didFinishGame
+- (void)gameDidFinish
 {
     [self updateUI];
 

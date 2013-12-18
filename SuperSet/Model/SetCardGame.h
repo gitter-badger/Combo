@@ -9,7 +9,7 @@
 @class SetCard, CardDeck;
 
 @protocol SetCardGameProtocol <NSObject>
-- (void) didFinishGame;
+- (void) gameDidFinish;
 @end
 
 @interface SetCardGame : NSObject

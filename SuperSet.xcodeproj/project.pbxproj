@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		44C233DA1853C8A7004544D2 /* SuperSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233DD1853C8A7004544D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C233DF1853C8A7004544D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		44C233E11853C8A7004544D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -118,7 +118,7 @@
 		44C233DB1853C8A7004544D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				44C233DA1853C8A7004544D2 /* SuperSet.app */,
+				44C233DA1853C8A7004544D2 /* Combo.app */,
 				44C233FE1853C8A7004544D2 /* SuperSetTests.xctest */,
 			);
 			name = Products;
@@ -206,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		44C233D91853C8A7004544D2 /* SuperSet */ = {
+		44C233D91853C8A7004544D2 /* Combo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44C2340F1853C8A7004544D2 /* Build configuration list for PBXNativeTarget "SuperSet" */;
+			buildConfigurationList = 44C2340F1853C8A7004544D2 /* Build configuration list for PBXNativeTarget "Combo" */;
 			buildPhases = (
 				44C233D61853C8A7004544D2 /* Sources */,
 				44C233D71853C8A7004544D2 /* Frameworks */,
@@ -218,9 +218,9 @@
 			);
 			dependencies = (
 			);
-			name = SuperSet;
+			name = Combo;
 			productName = SuperSet;
-			productReference = 44C233DA1853C8A7004544D2 /* SuperSet.app */;
+			productReference = 44C233DA1853C8A7004544D2 /* Combo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		44C233FD1853C8A7004544D2 /* SuperSetTests */ = {
@@ -271,7 +271,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				44C233D91853C8A7004544D2 /* SuperSet */,
+				44C233D91853C8A7004544D2 /* Combo */,
 				44C233FD1853C8A7004544D2 /* SuperSetTests */,
 			);
 		};
@@ -331,7 +331,7 @@
 /* Begin PBXTargetDependency section */
 		44C234041853C8A7004544D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 44C233D91853C8A7004544D2 /* SuperSet */;
+			target = 44C233D91853C8A7004544D2 /* Combo */;
 			targetProxy = 44C234031853C8A7004544D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44C2340F1853C8A7004544D2 /* Build configuration list for PBXNativeTarget "SuperSet" */ = {
+		44C2340F1853C8A7004544D2 /* Build configuration list for PBXNativeTarget "Combo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44C234101853C8A7004544D2 /* Debug */,

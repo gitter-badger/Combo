@@ -60,8 +60,8 @@
 		441A41151872ED100023EC28 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		441A41161872ED100023EC28 /* MTBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBlockAlertView.h; sourceTree = "<group>"; };
 		441A41171872ED100023EC28 /* MTBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
-		441A41291872F0750023EC28 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		441A412A1872F0750023EC28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		441A41291872F0750023EC28 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "Combo/Supporting Files/LICENSE"; sourceTree = "<group>"; };
+		441A412A1872F0750023EC28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = "Combo/Supporting Files/README.md"; sourceTree = "<group>"; };
 		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233DD1853C8A7004544D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C233DF1853C8A7004544D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,8 +122,6 @@
 		441A41101872ED100023EC28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				441A41291872F0750023EC28 /* LICENSE */,
-				441A412A1872F0750023EC28 /* README.md */,
 				441A41111872ED100023EC28 /* AppDelegate.h */,
 				441A41121872ED100023EC28 /* AppDelegate.m */,
 				441A41131872ED100023EC28 /* Combo-Info.plist */,
@@ -139,6 +137,8 @@
 		44C233D11853C8A7004544D2 = {
 			isa = PBXGroup;
 			children = (
+				441A41291872F0750023EC28 /* LICENSE */,
+				441A412A1872F0750023EC28 /* README.md */,
 				441A40F51872ED100023EC28 /* Combo */,
 				44C233DC1853C8A7004544D2 /* Frameworks */,
 				44C233DB1853C8A7004544D2 /* Products */,

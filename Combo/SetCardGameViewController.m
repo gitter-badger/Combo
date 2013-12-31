@@ -55,10 +55,13 @@
 
 - (void)gameDidFinish
 {
+    NSArray *messages = @[@"Awesome!", @"Great Job!", @"Whew!", @"Nice Work!", @"Let's Play Again!"];
+    unsigned index = arc4random() % [messages count];
+
     [self updateUI];
 
     [MTBlockAlertView showWithTitle:@"Game Over"
-                            message:@"Awesome!"
+                            message:messages[index]
                     completionBlock:^(UIAlertView *alertView) { [self createGame]; }];
 }
 

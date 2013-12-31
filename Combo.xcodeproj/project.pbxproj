@@ -24,6 +24,8 @@
 		441A41261872ED100023EC28 /* Combo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 441A41131872ED100023EC28 /* Combo-Info.plist */; };
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41281872ED100023EC28 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41171872ED100023EC28 /* MTBlockAlertView.m */; };
+		441A412B1872F0750023EC28 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 441A41291872F0750023EC28 /* LICENSE */; };
+		441A412C1872F0750023EC28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 441A412A1872F0750023EC28 /* README.md */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
 		44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DF1853C8A7004544D2 /* CoreGraphics.framework */; };
 		44C233E21853C8A7004544D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233E11853C8A7004544D2 /* UIKit.framework */; };
@@ -58,6 +60,8 @@
 		441A41151872ED100023EC28 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		441A41161872ED100023EC28 /* MTBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBlockAlertView.h; sourceTree = "<group>"; };
 		441A41171872ED100023EC28 /* MTBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
+		441A41291872F0750023EC28 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		441A412A1872F0750023EC28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233DD1853C8A7004544D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C233DF1853C8A7004544D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +122,8 @@
 		441A41101872ED100023EC28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				441A41291872F0750023EC28 /* LICENSE */,
+				441A412A1872F0750023EC28 /* README.md */,
 				441A41111872ED100023EC28 /* AppDelegate.h */,
 				441A41121872ED100023EC28 /* AppDelegate.m */,
 				441A41131872ED100023EC28 /* Combo-Info.plist */,
@@ -218,8 +224,10 @@
 				441A41191872ED100023EC28 /* Main_iPhone.storyboard in Resources */,
 				441A411C1872ED100023EC28 /* Images.xcassets in Resources */,
 				441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */,
+				441A412B1872F0750023EC28 /* LICENSE in Resources */,
 				441A41261872ED100023EC28 /* Combo-Info.plist in Resources */,
 				441A411A1872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */,
+				441A412C1872F0750023EC28 /* README.md in Resources */,
 				441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

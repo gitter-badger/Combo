@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F61872ED100023EC28 /* Main_iPad.storyboard */; };
-		441A41191872ED100023EC28 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F81872ED100023EC28 /* Main_iPhone.storyboard */; };
-		441A411A1872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone_4.storyboard */; };
+		441A41191872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */; };
+		441A411A1872ED100023EC28 /* Main_iPhone_5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */; };
 		441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FC1872ED100023EC28 /* InfoPlist.strings */; };
 		441A411C1872ED100023EC28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FE1872ED100023EC28 /* Images.xcassets */; };
 		441A411D1872ED100023EC28 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41011872ED100023EC28 /* Card.m */; };
@@ -26,6 +26,7 @@
 		441A41281872ED100023EC28 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41171872ED100023EC28 /* MTBlockAlertView.m */; };
 		441A412F1872F89E0023EC28 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 441A412D1872F89E0023EC28 /* LICENSE */; };
 		441A41301872F89E0023EC28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 441A412E1872F89E0023EC28 /* README.md */; };
+		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
 		44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DF1853C8A7004544D2 /* CoreGraphics.framework */; };
 		44C233E21853C8A7004544D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233E11853C8A7004544D2 /* UIKit.framework */; };
@@ -33,8 +34,8 @@
 
 /* Begin PBXFileReference section */
 		441A40F71872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		441A40F91872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		441A40FB1872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_4.storyboard; sourceTree = "<group>"; };
+		441A40F91872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_4.storyboard; sourceTree = "<group>"; };
+		441A40FB1872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_5.storyboard; sourceTree = "<group>"; };
 		441A40FD1872ED100023EC28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		441A40FE1872ED100023EC28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		441A41001872ED100023EC28 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Card.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -62,6 +63,8 @@
 		441A41171872ED100023EC28 /* MTBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
 		441A412D1872F89E0023EC28 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = LICENSE; sourceTree = "<group>"; };
 		441A412E1872F89E0023EC28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		441A41311874600E0023EC28 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		441A41321874600E0023EC28 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233DD1853C8A7004544D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C233DF1853C8A7004544D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,10 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				441A40F61872ED100023EC28 /* Main_iPad.storyboard */,
-				441A40F81872ED100023EC28 /* Main_iPhone.storyboard */,
-				441A40FA1872ED100023EC28 /* Main_iPhone_4.storyboard */,
+				441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */,
+				441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */,
 				441A40FE1872ED100023EC28 /* Images.xcassets */,
 				441A40FF1872ED100023EC28 /* Model */,
+				441A41311874600E0023EC28 /* InfoViewController.h */,
+				441A41321874600E0023EC28 /* InfoViewController.m */,
 				441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */,
 				441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */,
 				441A410C1872ED100023EC28 /* SetCardGameViewController.h */,
@@ -221,12 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441A41191872ED100023EC28 /* Main_iPhone.storyboard in Resources */,
+				441A41191872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */,
 				441A411C1872ED100023EC28 /* Images.xcassets in Resources */,
 				441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */,
 				441A412F1872F89E0023EC28 /* LICENSE in Resources */,
 				441A41261872ED100023EC28 /* Combo-Info.plist in Resources */,
-				441A411A1872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */,
+				441A411A1872ED100023EC28 /* Main_iPhone_5.storyboard in Resources */,
 				441A41301872F89E0023EC28 /* README.md in Resources */,
 				441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */,
 			);
@@ -241,6 +246,7 @@
 			files = (
 				441A41271872ED100023EC28 /* main.m in Sources */,
 				441A411E1872ED100023EC28 /* CardDeck.m in Sources */,
+				441A41331874600E0023EC28 /* InfoViewController.m in Sources */,
 				441A41241872ED100023EC28 /* SetCardView.m in Sources */,
 				441A41281872ED100023EC28 /* MTBlockAlertView.m in Sources */,
 				441A41251872ED100023EC28 /* AppDelegate.m in Sources */,
@@ -264,20 +270,20 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		441A40F81872ED100023EC28 /* Main_iPhone.storyboard */ = {
+		441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				441A40F91872ED100023EC28 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
+			name = Main_iPhone_4.storyboard;
 			sourceTree = "<group>";
 		};
-		441A40FA1872ED100023EC28 /* Main_iPhone_4.storyboard */ = {
+		441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				441A40FB1872ED100023EC28 /* Base */,
 			);
-			name = Main_iPhone_4.storyboard;
+			name = Main_iPhone_5.storyboard;
 			sourceTree = "<group>";
 		};
 		441A40FC1872ED100023EC28 /* InfoPlist.strings */ = {

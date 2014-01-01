@@ -1,6 +1,6 @@
 //
 //  SetCardGameViewController.m
-//  SuperSet
+//  Combo
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.
@@ -55,7 +55,7 @@
 
 - (void)gameDidFinish
 {
-    NSArray *messages = @[@"Awesome!", @"Great Job!", @"Whew!", @"Nice Work!", @"Let's Play Again!"];
+    NSArray *messages = @[@"Awesome!", @"Great Job!", @"Whew!", @"Nice Work!"];
     unsigned index = arc4random() % [messages count];
 
     [self updateUI];

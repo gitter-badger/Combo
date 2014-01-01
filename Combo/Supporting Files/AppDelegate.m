@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  SuperSet
+//  Combo
 //
 //  Created by Craig Maynard on 12/7/13.
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.
@@ -17,10 +17,10 @@
     UIStoryboard *storyboard;
 
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_4" bundle:nil];
     }
     else {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_4" bundle:nil];
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_5" bundle:nil];
     }
 
     UIViewController *mainViewController = [storyboard instantiateInitialViewController];

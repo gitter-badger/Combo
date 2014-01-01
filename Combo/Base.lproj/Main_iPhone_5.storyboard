@@ -146,6 +146,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="button" destination="RuQ-q2-RWh" id="x1D-X3-cuQ"/>
+                        <outlet property="versionLabel" destination="IwG-aq-yWh" id="N0q-0t-Thf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBZ-Cw-Twa" userLabel="First Responder" sceneMemberID="firstResponder"/>

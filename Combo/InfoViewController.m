@@ -12,6 +12,7 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
 
 @interface InfoViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *versionLabel;
 @property (nonatomic, weak) IBOutlet UIButton *button;
 
 @end
@@ -22,6 +23,8 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
 {
     [super viewDidLoad];
 
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    self.versionLabel.text = [NSString stringWithFormat:@"Version %@", version];
     [self.button setTitle:homePage forState:UIControlStateNormal];
 }
 

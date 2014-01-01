@@ -141,6 +141,7 @@
                     <navigationItem key="navigationItem" id="0oj-Pc-VpI"/>
                     <connections>
                         <outlet property="button" destination="sMg-YP-8CU" id="8uU-gG-a4t"/>
+                        <outlet property="versionLabel" destination="IwG-aq-yWh" id="W7e-KN-bqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBZ-Cw-Twa" userLabel="First Responder" sceneMemberID="firstResponder"/>

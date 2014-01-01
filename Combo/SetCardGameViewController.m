@@ -14,6 +14,7 @@
 #import "SetCardDeck.h"
 #import "SetCardView.h"
 #import "MTBlockAlertView.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
@@ -75,7 +76,7 @@
         [self updateUI];
         if (!success) {
             // match failed
-            [self animateCollection];
+            [self shake];
         }
     }
 }
@@ -182,17 +183,35 @@
                      completion:NULL];
 }
 
-- (void)animateCollection
+- (void)shake
 {
-    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse;
+    static CAKeyframeAnimation *animation;
 
-    CGAffineTransform transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 10, 0);
+    if (!animation) {
 
-    [UIView animateWithDuration:0.15
-                          delay:0
-                        options:options
-                     animations:^{ self.collectionView.transform = transform; }
-                     completion:^(BOOL finished){ self.collectionView.transform = CGAffineTransformIdentity; }];
+        animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        animation.duration = 0.25;
+        animation.delegate = self;
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = YES;
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+
+        NSMutableArray* values = [[NSMutableArray alloc] init];
+
+        int steps = 100;
+        double position = 0;
+        float e = 2.71;
+
+        for (int t = 0; t < steps; t++) {
+            position = 10 * pow(e, -0.022 * t) * sin(0.12 * t);
+            NSValue* value = [NSValue valueWithCGPoint:CGPointMake([self.collectionView center].x - position, [self.collectionView center].y)];
+            [values addObject:value];
+        }
+
+        animation.values = values;
+    }
+
+    [[self.collectionView layer] addAnimation:animation forKey:@"position"];
 }
 
 @end

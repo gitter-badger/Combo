@@ -1,12 +1,12 @@
 //
-//  SetCardGameViewController.m
+//  SetGameViewController.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.
 //
 
-#import "SetCardGameViewController.h"
+#import "SetGameViewController.h"
 #import "Card.h"
 #import "SetCardGame.h"
 #import "SetCard.h"
@@ -17,7 +17,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetCardGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
+@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
 
 @property (nonatomic, strong) SetCardGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation SetCardGameViewController
+@implementation SetGameViewController
 
 - (BOOL)prefersStatusBarHidden {
     return YES;

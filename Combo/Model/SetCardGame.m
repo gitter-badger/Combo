@@ -12,12 +12,11 @@
 
 @interface SetCardGame ()
 
-@property (nonatomic, readwrite) NSUInteger cardCount;
 @property (nonatomic, strong) CardDeck *deck;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, strong) NSMutableArray *cardsInPlay;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
-
+@property (nonatomic, readwrite) NSUInteger cardCount;
 @property (nonatomic, readwrite) CGFloat cardsToMatch;
 
 @end

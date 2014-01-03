@@ -18,7 +18,7 @@
 		441A41201872ED100023EC28 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41071872ED100023EC28 /* SetCardDeck.m */; };
 		441A41211872ED100023EC28 /* SetCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* SetCardGame.m */; };
 		441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */; };
-		441A41231872ED100023EC28 /* SetCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetCardGameViewController.m */; };
+		441A41231872ED100023EC28 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetGameViewController.m */; };
 		441A41241872ED100023EC28 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410F1872ED100023EC28 /* SetCardView.m */; };
 		441A41251872ED100023EC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41121872ED100023EC28 /* AppDelegate.m */; };
 		441A41261872ED100023EC28 /* Combo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 441A41131872ED100023EC28 /* Combo-Info.plist */; };
@@ -50,8 +50,8 @@
 		441A41091872ED100023EC28 /* SetCardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A410C1872ED100023EC28 /* SetCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A410D1872ED100023EC28 /* SetCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardGameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A410C1872ED100023EC28 /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A410D1872ED100023EC28 /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetGameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410E1872ED100023EC28 /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A410F1872ED100023EC28 /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41111872ED100023EC28 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -98,8 +98,8 @@
 				441A41321874600E0023EC28 /* InfoViewController.m */,
 				441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */,
 				441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */,
-				441A410C1872ED100023EC28 /* SetCardGameViewController.h */,
-				441A410D1872ED100023EC28 /* SetCardGameViewController.m */,
+				441A410C1872ED100023EC28 /* SetGameViewController.h */,
+				441A410D1872ED100023EC28 /* SetGameViewController.m */,
 				441A410E1872ED100023EC28 /* SetCardView.h */,
 				441A410F1872ED100023EC28 /* SetCardView.m */,
 				441A41101872ED100023EC28 /* Supporting Files */,
@@ -250,7 +250,7 @@
 				441A41241872ED100023EC28 /* SetCardView.m in Sources */,
 				441A41281872ED100023EC28 /* MTBlockAlertView.m in Sources */,
 				441A41251872ED100023EC28 /* AppDelegate.m in Sources */,
-				441A41231872ED100023EC28 /* SetCardGameViewController.m in Sources */,
+				441A41231872ED100023EC28 /* SetGameViewController.m in Sources */,
 				441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */,
 				441A41211872ED100023EC28 /* SetCardGame.m in Sources */,
 				441A41201872ED100023EC28 /* SetCardDeck.m in Sources */,

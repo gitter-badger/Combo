@@ -1,6 +1,6 @@
 //
 //  SetCardView.m
-//  SuperSet
+//  Combo
 //
 //  Created by Craig Maynard on 12/5/13.
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.

@@ -16,7 +16,7 @@
 		441A411E1872ED100023EC28 /* CardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41031872ED100023EC28 /* CardDeck.m */; };
 		441A411F1872ED100023EC28 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41051872ED100023EC28 /* SetCard.m */; };
 		441A41201872ED100023EC28 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41071872ED100023EC28 /* SetCardDeck.m */; };
-		441A41211872ED100023EC28 /* SetCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* SetCardGame.m */; };
+		441A41211872ED100023EC28 /* SetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* SetGame.m */; };
 		441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */; };
 		441A41231872ED100023EC28 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetGameViewController.m */; };
 		441A41241872ED100023EC28 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410F1872ED100023EC28 /* SetCardView.m */; };
@@ -46,8 +46,8 @@
 		441A41051872ED100023EC28 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41061872ED100023EC28 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardDeck.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A41071872ED100023EC28 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardDeck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A41081872ED100023EC28 /* SetCardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardGame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A41091872ED100023EC28 /* SetCardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A41081872ED100023EC28 /* SetGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A41091872ED100023EC28 /* SetGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410C1872ED100023EC28 /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -118,8 +118,8 @@
 				441A41051872ED100023EC28 /* SetCard.m */,
 				441A41061872ED100023EC28 /* SetCardDeck.h */,
 				441A41071872ED100023EC28 /* SetCardDeck.m */,
-				441A41081872ED100023EC28 /* SetCardGame.h */,
-				441A41091872ED100023EC28 /* SetCardGame.m */,
+				441A41081872ED100023EC28 /* SetGame.h */,
+				441A41091872ED100023EC28 /* SetGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 				441A41251872ED100023EC28 /* AppDelegate.m in Sources */,
 				441A41231872ED100023EC28 /* SetGameViewController.m in Sources */,
 				441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */,
-				441A41211872ED100023EC28 /* SetCardGame.m in Sources */,
+				441A41211872ED100023EC28 /* SetGame.m in Sources */,
 				441A41201872ED100023EC28 /* SetCardDeck.m in Sources */,
 				441A411D1872ED100023EC28 /* Card.m in Sources */,
 				441A411F1872ED100023EC28 /* SetCard.m in Sources */,

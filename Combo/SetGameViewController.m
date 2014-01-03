@@ -8,7 +8,7 @@
 
 #import "SetGameViewController.h"
 #import "Card.h"
-#import "SetCardGame.h"
+#import "SetGame.h"
 #import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
@@ -17,9 +17,9 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetCardGameProtocol>
+@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetGameProtocol>
 
-@property (nonatomic, strong) SetCardGame *game;
+@property (nonatomic, strong) SetGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIProgressView *progressView;
 @property (nonatomic) BOOL showHint;
@@ -89,7 +89,7 @@
 
 - (void)createGame
 {
-    self.game = [[SetCardGame alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
+    self.game = [[SetGame alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
     self.game.delegate = self;
     [self updateUI];
 }

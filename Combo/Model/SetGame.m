@@ -1,16 +1,16 @@
 //
-//  SetCardGame.m
+//  SetGame.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/16/13.
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.
 //
 
-#import "SetCardGame.h"
+#import "SetGame.h"
 #import "SetCard.h"
 #import "CardDeck.h"
 
-@interface SetCardGame ()
+@interface SetGame ()
 
 @property (nonatomic, strong) CardDeck *deck;
 @property (nonatomic, strong) NSMutableArray *cards;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation SetCardGame
+@implementation SetGame
 
 - (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck
 {

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Set Card Game View Controller-->
+        <!--Set Game View Controller-->
         <scene sceneID="wkW-Vo-aXn">
             <objects>
-                <viewController id="Srb-0V-3CJ" customClass="SetCardGameViewController" sceneMemberID="viewController">
+                <viewController id="Srb-0V-3CJ" customClass="SetGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhZ-H2-eWL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -1,5 +1,5 @@
 //
-//  SetCardGame.h
+//  SetGame.h
 //  Combo
 //
 //  Created by Craig Maynard on 11/16/13.
@@ -8,13 +8,13 @@
 
 @class SetCard, CardDeck;
 
-@protocol SetCardGameProtocol <NSObject>
+@protocol SetGameProtocol <NSObject>
 - (void) gameDidFinish;
 @end
 
-@interface SetCardGame : NSObject
+@interface SetGame : NSObject
 
-@property (nonatomic, weak) id<SetCardGameProtocol>delegate;
+@property (nonatomic, weak) id<SetGameProtocol>delegate;
 
 // designated initializer
 - (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck;

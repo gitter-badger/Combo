@@ -7,6 +7,7 @@
 //
 
 #import "InfoViewController.h"
+#import "WebViewController.h"
 
 NSString * const homePage = @"http://cmaynard.github.io/combo";
 
@@ -26,6 +27,16 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     self.versionLabel.text = [NSString stringWithFormat:@"Version %@", version];
     [self.button setTitle:homePage forState:UIControlStateNormal];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"show web page"]) {
+
+        WebViewController *vc = [segue destinationViewController];
+        vc.urlString = homePage;
+    }
+
 }
 
 - (IBAction)handleButtonTap:(id)sender

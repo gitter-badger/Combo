@@ -95,7 +95,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="250" y="101"/>
+            <point key="canvasLocation" x="206" y="101"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="QUc-IV-Cl5">
@@ -132,7 +132,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleButtonTap:" destination="dJW-1c-uQ3" eventType="touchUpInside" id="QtI-ha-hfr"/>
+                                    <segue destination="AYU-rE-QhL" kind="push" identifier="show web page" id="v02-in-tnD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,7 +151,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBZ-Cw-Twa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="101"/>
+            <point key="canvasLocation" x="687" y="101"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="MS3-ic-tn5">
+            <objects>
+                <viewController id="AYU-rE-QhL" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bbz-IQ-mUp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="BfT-sn-8np">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yiS-Jx-uek"/>
+                    <connections>
+                        <outlet property="webView" destination="BfT-sn-8np" id="OPM-FL-okw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hE8-zI-i6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4aD-yj-vJW">

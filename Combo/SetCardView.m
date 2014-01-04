@@ -91,7 +91,9 @@
 
         CGPoint origin = CGPointMake(xoffset, yoffset);
         CGRect frame = { origin, size };
-        frame = CGRectIntegral(frame);
+
+        // this line causes a vertical alignment problem when drawing 3 shapes at iPhone 4 scale factor
+        //frame = CGRectIntegral(frame);
 
         if ([self.shape isEqualToString:@"rectangle"]) {
             path = [UIBezierPath bezierPathWithRect:frame];
@@ -116,11 +118,11 @@
     path.lineWidth = 4.0 * [self scaleFactor];
     [path stroke];
 
-    if ([self.shading isEqualToString:@"solid"]) {
+    if ([self.shading isEqualToString:@"dark"]) {
         [path fill];
     }
 
-    if ([self.shading isEqualToString:@"striped"]) {
+    if ([self.shading isEqualToString:@"light"]) {
         [path fillWithBlendMode:kCGBlendModeNormal alpha:0.25];
     }
 }
@@ -144,11 +146,11 @@
     CGContextSaveGState(context);
 
     if (self.rank == 2) {
-        CGContextTranslateCTM(context, 0, -25 * [self scaleFactor]);
+        CGContextTranslateCTM(context, 0, -25.0 * [self scaleFactor]);
     }
 
     if (self.rank == 3) {
-        CGContextTranslateCTM(context, 0, -50 * [self scaleFactor]);
+        CGContextTranslateCTM(context, 0, -50.0 * [self scaleFactor]);
     }
 }
 

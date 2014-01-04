@@ -80,7 +80,7 @@
 
 + (NSArray *)validShadings
 {
-    return @[@"solid", @"striped", @"open"];
+    return @[@"dark", @"light", @"none"];
 }
 
 - (void)setRank:(NSUInteger)rank

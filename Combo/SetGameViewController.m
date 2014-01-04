@@ -38,6 +38,22 @@
 
     self.view.backgroundColor = [UIColor blackColor];
 
+    // customize the collection view layout
+
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.collectionView.collectionViewLayout = flowLayout;
+    flowLayout.minimumLineSpacing = 10.0;
+    flowLayout.minimumInteritemSpacing = 10.0;
+
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        flowLayout.itemSize = CGSizeMake(72.0, 96.0);
+        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 26.0, 5.0, 26.0);
+    }
+    else {
+        flowLayout.itemSize = CGSizeMake(90.0, 120.0);
+        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
+    }
+
     // Create the first game
     [self createGame];
 }

@@ -14,20 +14,20 @@
 {
     // Override point for customization after application launch.
 
-    UIStoryboard *storyboard;
-
-    if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_4" bundle:nil];
-    }
-    else {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_5" bundle:nil];
-    }
-
-    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
-
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = mainViewController;
-    [self.window makeKeyAndVisible];
+//    UIStoryboard *storyboard;
+//
+//    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+//        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_4" bundle:nil];
+//    }
+//    else {
+//        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_5" bundle:nil];
+//    }
+//
+//    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+//
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = mainViewController;
+//    [self.window makeKeyAndVisible];
 
     return YES;
 }

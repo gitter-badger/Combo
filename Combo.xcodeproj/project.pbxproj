@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F61872ED100023EC28 /* Main_iPad.storyboard */; };
-		441A41191872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */; };
-		441A411A1872ED100023EC28 /* Main_iPhone_5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */; };
+		441A411A1872ED100023EC28 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone.storyboard */; };
 		441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FC1872ED100023EC28 /* InfoPlist.strings */; };
 		441A411C1872ED100023EC28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FE1872ED100023EC28 /* Images.xcassets */; };
 		441A411D1872ED100023EC28 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41011872ED100023EC28 /* Card.m */; };
@@ -34,8 +33,7 @@
 
 /* Begin PBXFileReference section */
 		441A40F71872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		441A40F91872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_4.storyboard; sourceTree = "<group>"; };
-		441A40FB1872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_5.storyboard; sourceTree = "<group>"; };
+		441A40FB1872ED100023EC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		441A40FD1872ED100023EC28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		441A40FE1872ED100023EC28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		441A41001872ED100023EC28 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Card.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -90,8 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				441A40F61872ED100023EC28 /* Main_iPad.storyboard */,
-				441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */,
-				441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */,
+				441A40FA1872ED100023EC28 /* Main_iPhone.storyboard */,
 				441A40FE1872ED100023EC28 /* Images.xcassets */,
 				441A40FF1872ED100023EC28 /* Model */,
 				441A41311874600E0023EC28 /* InfoViewController.h */,
@@ -226,12 +223,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441A41191872ED100023EC28 /* Main_iPhone_4.storyboard in Resources */,
 				441A411C1872ED100023EC28 /* Images.xcassets in Resources */,
 				441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */,
 				441A412F1872F89E0023EC28 /* LICENSE in Resources */,
 				441A41261872ED100023EC28 /* Combo-Info.plist in Resources */,
-				441A411A1872ED100023EC28 /* Main_iPhone_5.storyboard in Resources */,
+				441A411A1872ED100023EC28 /* Main_iPhone.storyboard in Resources */,
 				441A41301872F89E0023EC28 /* README.md in Resources */,
 				441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */,
 			);
@@ -270,20 +266,12 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		441A40F81872ED100023EC28 /* Main_iPhone_4.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				441A40F91872ED100023EC28 /* Base */,
-			);
-			name = Main_iPhone_4.storyboard;
-			sourceTree = "<group>";
-		};
-		441A40FA1872ED100023EC28 /* Main_iPhone_5.storyboard */ = {
+		441A40FA1872ED100023EC28 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				441A40FB1872ED100023EC28 /* Base */,
 			);
-			name = Main_iPhone_5.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		441A40FC1872ED100023EC28 /* InfoPlist.strings */ = {

@@ -73,9 +73,6 @@
         }
     } while (![self containsSet]);
 
-    for (Card *card in self.cardsInPlay) {
-        card.new = NO;
-    }
     return;
 }
 

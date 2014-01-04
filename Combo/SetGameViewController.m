@@ -38,7 +38,7 @@
 
     self.view.backgroundColor = [UIColor blackColor];
 
-    // customize the collection view layout
+    // configure the flow layout
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView.collectionViewLayout = flowLayout;
@@ -148,6 +148,15 @@
     cell.cardView.color = card.color;
     cell.cardView.shading = card.shading;
     cell.cardView.hidden = card.isMatched;
+
+    if (card.isNew) {
+        CATransition *transition = [CATransition animation];
+        transition.type = kCATransitionMoveIn;
+        transition.subtype = kCATransitionFromBottom;
+        transition.duration = 0.3;
+        [cell.cardView.layer addAnimation:transition forKey:nil];
+        card.new = NO;
+    }
 
     if (self.showHint) {
         if (card.canMatch) {

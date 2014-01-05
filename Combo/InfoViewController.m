@@ -36,12 +36,6 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
         WebViewController *vc = [segue destinationViewController];
         vc.urlString = homePage;
     }
-
-}
-
-- (IBAction)handleButtonTap:(id)sender
-{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:homePage]];
 }
 
 @end

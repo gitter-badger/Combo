@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F61872ED100023EC28 /* Main_iPad.storyboard */; };
-		441A411A1872ED100023EC28 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone.storyboard */; };
 		441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FC1872ED100023EC28 /* InfoPlist.strings */; };
 		441A411C1872ED100023EC28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FE1872ED100023EC28 /* Images.xcassets */; };
 		441A411D1872ED100023EC28 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41011872ED100023EC28 /* Card.m */; };
@@ -20,14 +18,13 @@
 		441A41231872ED100023EC28 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetGameViewController.m */; };
 		441A41241872ED100023EC28 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410F1872ED100023EC28 /* SetCardView.m */; };
 		441A41251872ED100023EC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41121872ED100023EC28 /* AppDelegate.m */; };
-		441A41261872ED100023EC28 /* Combo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 441A41131872ED100023EC28 /* Combo-Info.plist */; };
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41281872ED100023EC28 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41171872ED100023EC28 /* MTBlockAlertView.m */; };
-		441A412F1872F89E0023EC28 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 441A412D1872F89E0023EC28 /* LICENSE */; };
-		441A41301872F89E0023EC28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 441A412E1872F89E0023EC28 /* README.md */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		4428A53818789DAD004D657F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428A53718789DAD004D657F /* WebViewController.m */; };
 		4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4428A5391878A78B004D657F /* MessageUI.framework */; };
+		4428A53B1878FAD4004D657F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FA1872ED100023EC28 /* Main_iPhone.storyboard */; };
+		4428A53C1878FADD004D657F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441A40F61872ED100023EC28 /* Main_iPad.storyboard */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
 		44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DF1853C8A7004544D2 /* CoreGraphics.framework */; };
 		44C233E21853C8A7004544D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233E11853C8A7004544D2 /* UIKit.framework */; };
@@ -232,13 +229,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4428A53C1878FADD004D657F /* Main_iPad.storyboard in Resources */,
+				4428A53B1878FAD4004D657F /* Main_iPhone.storyboard in Resources */,
 				441A411C1872ED100023EC28 /* Images.xcassets in Resources */,
 				441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */,
-				441A412F1872F89E0023EC28 /* LICENSE in Resources */,
-				441A41261872ED100023EC28 /* Combo-Info.plist in Resources */,
-				441A411A1872ED100023EC28 /* Main_iPhone.storyboard in Resources */,
-				441A41301872F89E0023EC28 /* README.md in Resources */,
-				441A41181872ED100023EC28 /* Main_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +375,7 @@
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1947B6F0-69E5-4FBB-9669-04440F69A024";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,7 +392,7 @@
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1947B6F0-69E5-4FBB-9669-04440F69A024";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

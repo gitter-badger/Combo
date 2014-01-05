@@ -12,6 +12,7 @@
 @interface WebViewController () <UIWebViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, strong) MFMailComposeViewController *mailer;
 
 @end
@@ -27,6 +28,18 @@
 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
     [self.webView loadRequest:request];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self.spinner startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self.spinner stopAnimating];
 }
 
 - (MFMailComposeViewController *)mailer

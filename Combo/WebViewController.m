@@ -58,9 +58,11 @@
             [self.mailer setToRecipients:[NSArray arrayWithObject:request.URL.resourceSpecifier]];
             [self presentViewController:self.mailer animated:YES completion:NULL];
         }
+        return NO;
     }
-
-    return YES;
+    else {
+        return YES;
+    }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

@@ -9,7 +9,7 @@
 #import "InfoViewController.h"
 #import "WebViewController.h"
 
-NSString * const homePage = @"http://cmaynard.github.io/combo";
+NSString * const ComboHomePage = @"http://cmaynard.github.io/combo";
 
 @interface InfoViewController ()
 
@@ -26,7 +26,15 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
 
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     self.versionLabel.text = [NSString stringWithFormat:@"Version %@", version];
-    [self.button setTitle:homePage forState:UIControlStateNormal];
+    [self.button setTitle:ComboHomePage forState:UIControlStateNormal];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:ComboHomePage]];
+        if (!data) {
+            // site down or no internet connection
+            self.button.enabled = NO;
+        }
+    });
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -34,7 +42,7 @@ NSString * const homePage = @"http://cmaynard.github.io/combo";
     if ([[segue identifier] isEqualToString:@"show web page"]) {
 
         WebViewController *vc = [segue destinationViewController];
-        vc.urlString = homePage;
+        vc.urlString = ComboHomePage;
     }
 }
 

@@ -12,7 +12,6 @@
 #import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
-#import "SetCardView.h"
 #import "MTBlockAlertView.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -134,7 +133,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SetCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SetCard" forIndexPath:indexPath];
+    SetCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Collection View Cell" forIndexPath:indexPath];
     SetCard *card = [self.game cardAtIndex:indexPath.item];
     [self updateCell:cell usingCard:card];
 
@@ -143,18 +142,18 @@
 
 - (void)updateCell:(SetCardCollectionViewCell *)cell usingCard:(SetCard *)card
 {
-    cell.cardView.rank = card.rank;
-    cell.cardView.shape = card.shape;
-    cell.cardView.color = card.color;
-    cell.cardView.shading = card.shading;
-    cell.cardView.hidden = card.isMatched;
+    cell.rank = card.rank;
+    cell.shape = card.shape;
+    cell.color = card.color;
+    cell.shading = card.shading;
+    cell.hidden = card.isMatched;
 
     if (card.isNew) {
         CATransition *transition = [CATransition animation];
         transition.type = kCATransitionMoveIn;
         transition.subtype = kCATransitionFromBottom;
         transition.duration = 0.3;
-        [cell.cardView.layer addAnimation:transition forKey:nil];
+        [cell.layer addAnimation:transition forKey:nil];
         card.new = NO;
     }
 
@@ -186,7 +185,7 @@
     [UIView animateWithDuration:0.25
                           delay:0
                         options:options
-                     animations:^{ cell.cardView.transform = transform; }
+                     animations:^{ cell.transform = transform; }
                      completion:NULL];
 }
 
@@ -202,7 +201,7 @@
     [UIView animateWithDuration:0.1
                           delay:0
                         options:options
-                     animations:^{ cell.cardView.transform = transform; }
+                     animations:^{ cell.transform = transform; }
                      completion:NULL];
 }
 

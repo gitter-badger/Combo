@@ -6,11 +6,13 @@
 //  Copyright (c) 2014 Craig Maynard. All rights reserved.
 //
 
-@class SetCardView;
-
 @interface SetCardCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet SetCardView *cardView;
-@property (nonatomic) BOOL animating;
+@property (nonatomic, assign) NSUInteger rank;
+@property (nonatomic, strong) NSString *shape;
+@property (nonatomic, strong) NSString *color;
+@property (nonatomic, strong) NSString *shading;
+@property (nonatomic, strong) UIColor *fillColor;
+@property (nonatomic, assign) BOOL animating;
 
 @end

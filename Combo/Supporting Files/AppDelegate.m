@@ -3,7 +3,7 @@
 //  Combo
 //
 //  Created by Craig Maynard on 12/7/13.
-//  Copyright (c) 2014 Craig Maynard. All rights reserved.
+//  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -13,22 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
-//    UIStoryboard *storyboard;
-//
-//    if ([[UIScreen mainScreen] bounds].size.height == 480) {
-//        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_4" bundle:nil];
-//    }
-//    else {
-//        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone_5" bundle:nil];
-//    }
-//
-//    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
-//
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController = mainViewController;
-//    [self.window makeKeyAndVisible];
-
     return YES;
 }
 							

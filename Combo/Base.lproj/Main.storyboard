@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Q3f-9m-kiD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Q3f-9m-kiD">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <scenes>
         <!--Set Game View Controller-->
@@ -15,7 +14,7 @@
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="EGk-F6-tiX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yyb-0j-Xpm">
                                     <size key="itemSize" width="90" height="120"/>
@@ -42,12 +41,12 @@
                             </collectionView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="A74-j6-vSE">
                                 <rect key="frame" x="85" y="544" width="150" height="3"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ZZg-fN-riH">
                                 <rect key="frame" x="278" y="534" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,36 +95,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDW-bm-ObE">
-                                <rect key="frame" x="118" y="132" width="85" height="21"/>
+                            <webView contentMode="scaleToFill" id="5Im-4b-MFW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IwG-aq-yWh">
-                                <rect key="frame" x="118" y="178" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2014 Craig Maynard. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9A3-f2-gan">
-                                <rect key="frame" x="44" y="224" width="232" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RuQ-q2-RWh">
-                                <rect key="frame" x="44" y="322" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <state key="normal" title="Home Page">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="AYU-rE-QhL" kind="push" identifier="show web page" id="v02-in-tnD"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -136,43 +110,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="button" destination="RuQ-q2-RWh" id="x1D-X3-cuQ"/>
-                        <outlet property="versionLabel" destination="IwG-aq-yWh" id="N0q-0t-Thf"/>
+                        <outlet property="webView" destination="5Im-4b-MFW" id="VF1-Av-Sno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBZ-Cw-Twa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687" y="101"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="MS3-ic-tn5">
-            <objects>
-                <viewController id="AYU-rE-QhL" customClass="WebViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bbz-IQ-mUp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="BfT-sn-8np">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="p08-0C-JVh">
-                                <rect key="frame" x="150" y="307" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="yiS-Jx-uek"/>
-                    <connections>
-                        <outlet property="spinner" destination="p08-0C-JVh" id="0iv-03-oya"/>
-                        <outlet property="webView" destination="BfT-sn-8np" id="OPM-FL-okw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hE8-zI-i6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1157" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4aD-yj-vJW">

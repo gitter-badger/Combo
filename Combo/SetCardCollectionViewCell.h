@@ -3,7 +3,7 @@
 //  Combo
 //
 //  Created by Craig Maynard on 12/8/13.
-//  Copyright (c) 2014 Craig Maynard. All rights reserved.
+//  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
 @interface SetCardCollectionViewCell : UICollectionViewCell

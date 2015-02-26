@@ -3,7 +3,7 @@
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.
-//  Copyright (c) 2014 Craig Maynard. All rights reserved.
+//  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
 #import "SetGameViewController.h"
@@ -12,11 +12,11 @@
 #import "SetCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
-#import "MTBlockAlertView.h"
+#import "UIAlertView+Blocks.h"
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SetGameProtocol>
+@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SetGameProtocol>
 
 @property (nonatomic, strong) SetGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -40,28 +40,65 @@
     // configure the flow layout
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    // flowLayout.estimatedItemSize = CGSizeMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.height/2);
     self.collectionView.collectionViewLayout = flowLayout;
+    // self.collectionView.delegate = self;
 
-    if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        flowLayout.itemSize = CGSizeMake(72.0, 96.0);
-        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 26.0, 5.0, 26.0);
-    }
-    else {
-        flowLayout.itemSize = CGSizeMake(90.0, 120.0);
-        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
-    }
+//    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+//        flowLayout.itemSize = CGSizeMake(72.0, 96.0);
+//        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 26.0, 5.0, 26.0);
+//    }
+//    else {
+//        flowLayout.itemSize = CGSizeMake(90.0, 120.0);
+//        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
+//    }
+
+    CGSize size = self.collectionView.frame.size;
+    UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
+    CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 12.0 : 15.0);
+    CGFloat height = size.height / 4.0 - offset;
+
+    flowLayout.itemSize = CGSizeMake(height * 0.75, height);
+    flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
 
     // Create the first game
     [self createGame];
 }
 
--(void)viewWillAppear:(BOOL)animated
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static CGSize itemSize;
+
+    if (CGSizeEqualToSize(itemSize, CGSizeZero)) {
+        CGSize size = self.collectionView.frame.size;
+        UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
+        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 15.0);
+        CGFloat height = size.height / 4.0 - offset;
+        itemSize = CGSizeMake(height * 0.75, height);
+    }
+
+    return itemSize;
+}
+
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+//                        layout:(UICollectionViewLayout *)collectionViewLayout
+//        insetForSectionAtIndex:(NSInteger)section
+//{
+//    CGSize size = self.collectionView.frame.size;
+//    return UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
+//}
+
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }
 
--(void)viewWillDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO];
     [super viewWillDisappear:animated];
@@ -71,12 +108,13 @@
 {
     NSArray *messages = @[@"Awesome!", @"Great Job!", @"Whew!", @"Nice Work!"];
     unsigned index = arc4random() % [messages count];
+    UIAlertViewCompletionBlock completionBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) { [self createGame]; };
 
     [self updateUI];
 
-    [MTBlockAlertView showWithTitle:@"Game Over"
-                            message:messages[index]
-                    completionBlock:^(UIAlertView *alertView) { [self createGame]; }];
+    [UIAlertView showWithTitle:@"Game Over"
+                       message:messages[index]
+                      tapBlock:completionBlock];
 }
 
 - (IBAction)singleTap:(UITapGestureRecognizer *)gesture

@@ -1,4 +1,4 @@
 combo
 =====
 
-A card matching game for iPhone
+A card matching game for iPhone and iPad.

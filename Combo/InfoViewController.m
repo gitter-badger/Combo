@@ -7,13 +7,11 @@
 //
 
 #import "InfoViewController.h"
+#import "UIAlertView+Blocks.h"
 #import <MessageUI/MessageUI.h>
 
 @interface InfoViewController () <UIWebViewDelegate, MFMailComposeViewControllerDelegate>
-
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (nonatomic, strong) MFMailComposeViewController *mailer;
-
 @end
 
 @implementation InfoViewController
@@ -32,12 +30,12 @@
 
     if ([request.URL.scheme isEqualToString:@"mailto"]) {
         if ([MFMailComposeViewController canSendMail]) {
-            // construct and present a new email controller (do not reuse)
-            self.mailer = [[MFMailComposeViewController alloc] init];
-            self.mailer.mailComposeDelegate = self;
-            [self.mailer setToRecipients:[NSArray arrayWithObject:request.URL.resourceSpecifier]];
-            [self.mailer setSubject:(NSString *)@"Combo Feedback"];
-            [self presentViewController:self.mailer animated:YES completion:NULL];
+            // always start with a new mail controller (do not reuse)
+            MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+            mailer.mailComposeDelegate = self;
+            [mailer setToRecipients:@[@"feedback@chmaynard.com"]];
+            [mailer setSubject:(NSString *)@"Combo Feedback"];
+            [self presentViewController:mailer animated:YES completion:NULL];
         }
         return NO;
     }
@@ -51,15 +49,13 @@
                         error:(NSError *)error {
 
     if (error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error with message"
-                                                        message:[NSString stringWithFormat:@"Error %@", [error description]]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Try Again Later!"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
+
+        [UIAlertView showWithTitle:@"Error"
+                           message:[error description]
+                          tapBlock:nil];
     }
 
-    [self dismissViewControllerAnimated:YES completion:^{ self.mailer = nil; }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

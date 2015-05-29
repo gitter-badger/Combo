@@ -19,6 +19,10 @@
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4428A5391878A78B004D657F /* MessageUI.framework */; };
+		4494E9561B180C21008DD39D /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9511B180B07008DD39D /* XWebView.framework */; };
+		4494E95A1B180F85008DD39D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9591B180F85008DD39D /* WebKit.framework */; };
+		4494E95F1B181FC0008DD39D /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E95E1B181FC0008DD39D /* XWebView.framework */; };
+		4494E9621B1820EA008DD39D /* XWebView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4494E9511B180B07008DD39D /* XWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4497EC751A33BCA40056382A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4497EC741A33BCA40056382A /* Images.xcassets */; };
 		44AAE64E1A33B30F00867903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AAE64C1A33B30F00867903 /* Main.storyboard */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
@@ -29,6 +33,43 @@
 		44FF34BB1A9E8D110093508F /* pygment_trac.css in Resources */ = {isa = PBXBuildFile; fileRef = 44FF34B81A9E8D110093508F /* pygment_trac.css */; };
 		44FF34BD1A9E8D110093508F /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 44FF34BA1A9E8D110093508F /* styles.css */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4494E9501B180B07008DD39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE62683519FA323900EFC3F8;
+			remoteInfo = XWebView;
+		};
+		4494E9521B180B07008DD39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB023EA01A8C506600580A2A;
+			remoteInfo = XWebViewTests;
+		};
+		4494E9541B180B20008DD39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE62683419FA323900EFC3F8;
+			remoteInfo = XWebView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4494E9611B1820C2008DD39D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4494E9621B1820EA008DD39D /* XWebView.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		441A40FD1872ED100023EC28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,13 +97,15 @@
 		441A41311874600E0023EC28 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		441A41321874600E0023EC28 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		4428A5391878A78B004D657F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4494E94B1B180B07008DD39D /* XWebView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XWebView.xcodeproj; path = ../XWebView/XWebView.xcodeproj; sourceTree = "<group>"; };
+		4494E9591B180F85008DD39D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/WebKit.framework"; sourceTree = "<absolute>"; };
+		4494E95E1B181FC0008DD39D /* XWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XWebView.framework; path = Combo/XWebView.framework; sourceTree = "<group>"; };
 		4497EC741A33BCA40056382A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44AAE64D1A33B30F00867903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C233DD1853C8A7004544D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C233DF1853C8A7004544D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		44C233E11853C8A7004544D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		44C233FF1853C8A7004544D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		44FF34A91A9E83040093508F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		44FF34B51A9E845C0093508F /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		44FF34B61A9E845C0093508F /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
@@ -77,8 +120,11 @@
 			files = (
 				4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */,
 				44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */,
+				4494E95F1B181FC0008DD39D /* XWebView.framework in Frameworks */,
+				4494E95A1B180F85008DD39D /* WebKit.framework in Frameworks */,
 				44C233E21853C8A7004544D2 /* UIKit.framework in Frameworks */,
 				44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */,
+				4494E9561B180C21008DD39D /* XWebView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +181,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4494E94C1B180B07008DD39D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4494E9511B180B07008DD39D /* XWebView.framework */,
+				4494E9531B180B07008DD39D /* XWebViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		44C233D11853C8A7004544D2 = {
 			isa = PBXGroup;
 			children = (
+				4494E94B1B180B07008DD39D /* XWebView.xcodeproj */,
 				441A412D1872F89E0023EC28 /* LICENSE */,
 				441A412E1872F89E0023EC28 /* README.md */,
 				441A40F51872ED100023EC28 /* Combo */,
@@ -161,7 +217,8 @@
 				44C233DD1853C8A7004544D2 /* Foundation.framework */,
 				44C233DF1853C8A7004544D2 /* CoreGraphics.framework */,
 				44C233E11853C8A7004544D2 /* UIKit.framework */,
-				44C233FF1853C8A7004544D2 /* XCTest.framework */,
+				4494E9591B180F85008DD39D /* WebKit.framework */,
+				4494E95E1B181FC0008DD39D /* XWebView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,10 +243,12 @@
 				44C233D61853C8A7004544D2 /* Sources */,
 				44C233D71853C8A7004544D2 /* Frameworks */,
 				44C233D81853C8A7004544D2 /* Resources */,
+				4494E9611B1820C2008DD39D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4494E9551B180B20008DD39D /* PBXTargetDependency */,
 			);
 			name = Combo;
 			productName = SuperSet;
@@ -206,7 +265,7 @@
 				ORGANIZATIONNAME = "Craig Maynard";
 				TargetAttributes = {
 					44C233D91853C8A7004544D2 = {
-						DevelopmentTeam = E9D3DEY43C;
+						DevelopmentTeam = GH96T8DXG2;
 					};
 				};
 			};
@@ -221,12 +280,35 @@
 			mainGroup = 44C233D11853C8A7004544D2;
 			productRefGroup = 44C233DB1853C8A7004544D2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4494E94C1B180B07008DD39D /* Products */;
+					ProjectRef = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				44C233D91853C8A7004544D2 /* Combo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4494E9511B180B07008DD39D /* XWebView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XWebView.framework;
+			remoteRef = 4494E9501B180B07008DD39D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4494E9531B180B07008DD39D /* XWebViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XWebViewTests.xctest;
+			remoteRef = 4494E9521B180B07008DD39D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		44C233D81853C8A7004544D2 /* Resources */ = {
@@ -264,6 +346,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4494E9551B180B20008DD39D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XWebView;
+			targetProxy = 4494E9541B180B20008DD39D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		441A40FC1872ED100023EC28 /* InfoPlist.strings */ = {
@@ -366,12 +456,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Combo-agosvdooxilxgoasudtvpchjawcr/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/Combo",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e4bd0d6e-dced-4478-b08e-679dcc38875c";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -382,13 +480,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Combo-agosvdooxilxgoasudtvpchjawcr/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/Combo",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e4bd0d6e-dced-4478-b08e-679dcc38875c";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

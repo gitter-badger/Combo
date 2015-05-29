@@ -10,6 +10,8 @@
 	<string>Combo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>77BCA865A4E419AEDEBECBDC9EFA3811D90E383D</key>
+		<string>https://github.com/XWebView/XWebView.git</string>
 		<key>84D1484FB2CE9AFB09C12DF31B9108A98AE531A8</key>
 		<string>https://github.com/cmaynard/combo.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Combo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>77BCA865A4E419AEDEBECBDC9EFA3811D90E383D</key>
+		<string>../../../XWebView</string>
 		<key>84D1484FB2CE9AFB09C12DF31B9108A98AE531A8</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>84D1484FB2CE9AFB09C12DF31B9108A98AE531A8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>combo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>77BCA865A4E419AEDEBECBDC9EFA3811D90E383D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XWebView</string>
 		</dict>
 	</array>
 </dict>

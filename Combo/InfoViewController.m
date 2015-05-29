@@ -27,10 +27,10 @@
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:config];
     webView.navigationDelegate = self;
 
-    // In Combo 1.2, we switched from UIWebView to the new, shiny WKWebView class.
-    // The XWebView extension loadFileURL:allowingReadAccessToURL: is needed here
-    // because WKWebView currently lacks the ability to load local files on the device.
-    // XWebView framework repository: https://github.com/XWebView/XWebView
+    // In Combo 1.2, we switched from the UIWebView class to the new, shiny WKWebView.
+    // Sadly, WKWebView currently lacks the ability to load local files on the device.
+    // XWebView, a Swift framework that extends WKWebView, contains a method that solves
+    // this problem. XWebView is a GitHub project: https://github.com/XWebView/XWebView
 
     SEL selector = NSSelectorFromString(@"loadFileURL:allowingReadAccessToURL:");
     if ([webView respondsToSelector:selector]) {

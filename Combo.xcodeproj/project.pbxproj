@@ -19,9 +19,8 @@
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4428A5391878A78B004D657F /* MessageUI.framework */; };
+		44760AB51B1F330B004BDC7E /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9511B180B07008DD39D /* XWebView.framework */; };
 		448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448AA8541B1E70610098FD05 /* WebKit.framework */; };
-		448AA85C1B1E73CC0098FD05 /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448AA85B1B1E73CC0098FD05 /* XWebView.framework */; };
-		448AA85D1B1E74380098FD05 /* XWebView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 448AA85B1B1E73CC0098FD05 /* XWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4497EC751A33BCA40056382A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4497EC741A33BCA40056382A /* Images.xcassets */; };
 		44AAE64E1A33B30F00867903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AAE64C1A33B30F00867903 /* Main.storyboard */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
@@ -78,7 +77,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				448AA85D1B1E74380098FD05 /* XWebView.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +109,6 @@
 		441A41321874600E0023EC28 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		4428A5391878A78B004D657F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		448AA8541B1E70610098FD05 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		448AA85B1B1E73CC0098FD05 /* XWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XWebView.framework; sourceTree = "<group>"; };
 		4494E94B1B180B07008DD39D /* XWebView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XWebView.xcodeproj; path = ../XWebView/XWebView.xcodeproj; sourceTree = "<group>"; };
 		4497EC741A33BCA40056382A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44AAE64D1A33B30F00867903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448AA85C1B1E73CC0098FD05 /* XWebView.framework in Frameworks */,
+				44760AB51B1F330B004BDC7E /* XWebView.framework in Frameworks */,
 				448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */,
 				4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */,
 				44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */,
@@ -225,7 +222,6 @@
 		44C233DC1853C8A7004544D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				448AA85B1B1E73CC0098FD05 /* XWebView.framework */,
 				448AA8541B1E70610098FD05 /* WebKit.framework */,
 				4428A5391878A78B004D657F /* MessageUI.framework */,
 				44C233DD1853C8A7004544D2 /* Foundation.framework */,

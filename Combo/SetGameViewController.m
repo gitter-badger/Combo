@@ -21,7 +21,9 @@
 @property (nonatomic, strong) SetGame *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIProgressView *progressView;
-@property (nonatomic) BOOL showHint;
+@property (nonatomic, assign) BOOL showHint;
+@property (nonatomic, readonly) UIEdgeInsets insets;
+@property (nonatomic, readonly) CGSize itemSize;
 
 @end
 
@@ -31,41 +33,43 @@
     return YES;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (UIEdgeInsets)insets {
+    return [self collectionView:self.collectionView
+                        layout:self.collectionView.collectionViewLayout
+        insetForSectionAtIndex:0];
+}
 
-    self.view.backgroundColor = [UIColor blackColor];
-
-    // configure the flow layout
-
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    // flowLayout.estimatedItemSize = CGSizeMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.height/2);
-    self.collectionView.collectionViewLayout = flowLayout;
-    // self.collectionView.delegate = self;
-
-//    if ([[UIScreen mainScreen] bounds].size.height == 480) {
-//        flowLayout.itemSize = CGSizeMake(72.0, 96.0);
-//        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 26.0, 5.0, 26.0);
-//    }
-//    else {
-//        flowLayout.itemSize = CGSizeMake(90.0, 120.0);
-//        flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
-//    }
-
-    CGSize size = self.collectionView.frame.size;
-    UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
-    CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 12.0 : 15.0);
-    CGFloat height = size.height / 4.0 - offset;
-
-    flowLayout.itemSize = CGSizeMake(height * 0.75, height);
-    flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
-
-    // Create the first game
-    [self createGame];
+- (CGSize)itemSize {
+    return [self collectionView:self.collectionView
+                        layout:self.collectionView.collectionViewLayout
+        sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                        layout:(UICollectionViewLayout *)collectionViewLayout
+        insetForSectionAtIndex:(NSInteger)section
+{
+    static UIEdgeInsets insets;
+
+    if (UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero)) {
+        UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
+        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 15.0);
+        insets = UIEdgeInsetsMake(offset, offset, 0.0, offset);
+    }
+
+    return insets;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout *)collectionViewLayout
+minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    CGFloat spacing = (self.collectionView.frame.size.width - (self.itemSize.width * 3.0) - (self.insets.top * 2.0)) / 2.0;
+
+    return spacing;
+}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
@@ -74,23 +78,26 @@
     static CGSize itemSize;
 
     if (CGSizeEqualToSize(itemSize, CGSizeZero)) {
-        CGSize size = self.collectionView.frame.size;
-        UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
-        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 15.0);
-        CGFloat height = size.height / 4.0 - offset;
+        CGSize frameSize = self.collectionView.frame.size;
+        CGFloat height = frameSize.height / 4.0 - self.insets.top;
         itemSize = CGSizeMake(height * 0.75, height);
     }
 
     return itemSize;
 }
 
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
-//                        layout:(UICollectionViewLayout *)collectionViewLayout
-//        insetForSectionAtIndex:(NSInteger)section
-//{
-//    CGSize size = self.collectionView.frame.size;
-//    return UIEdgeInsetsMake(10.0, 10.0, 0.0, 10.0);
-//}
+#pragma mark - View Management
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.view.backgroundColor = [UIColor blackColor];
+    self.collectionView.delegate = self;
+
+    // Create the first game
+    [self createGame];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -103,6 +110,8 @@
     [self.navigationController setNavigationBarHidden:NO];
     [super viewWillDisappear:animated];
 }
+
+#pragma mark - Game Control
 
 - (void)gameDidFinish
 {

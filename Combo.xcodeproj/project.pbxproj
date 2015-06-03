@@ -19,8 +19,9 @@
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4428A5391878A78B004D657F /* MessageUI.framework */; };
-		445F5B8C1B1A3AD800EAD8C9 /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9511B180B07008DD39D /* XWebView.framework */; };
-		4494E95A1B180F85008DD39D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9591B180F85008DD39D /* WebKit.framework */; };
+		448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448AA8541B1E70610098FD05 /* WebKit.framework */; };
+		448AA85C1B1E73CC0098FD05 /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448AA85B1B1E73CC0098FD05 /* XWebView.framework */; };
+		448AA85D1B1E74380098FD05 /* XWebView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 448AA85B1B1E73CC0098FD05 /* XWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4497EC751A33BCA40056382A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4497EC741A33BCA40056382A /* Images.xcassets */; };
 		44AAE64E1A33B30F00867903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AAE64C1A33B30F00867903 /* Main.storyboard */; };
 		44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C233DD1853C8A7004544D2 /* Foundation.framework */; };
@@ -34,6 +35,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		445F5B8E1B1A3AD800EAD8C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE62683419FA323900EFC3F8;
+			remoteInfo = XWebView;
+		};
+		448AA8591B1E70F30098FD05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
 			proxyType = 1;
@@ -70,6 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				448AA85D1B1E74380098FD05 /* XWebView.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +110,9 @@
 		441A41311874600E0023EC28 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		441A41321874600E0023EC28 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		4428A5391878A78B004D657F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		448AA8541B1E70610098FD05 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		448AA85B1B1E73CC0098FD05 /* XWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XWebView.framework; sourceTree = "<group>"; };
 		4494E94B1B180B07008DD39D /* XWebView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XWebView.xcodeproj; path = ../XWebView/XWebView.xcodeproj; sourceTree = "<group>"; };
-		4494E9591B180F85008DD39D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/WebKit.framework"; sourceTree = "<absolute>"; };
-		4494E95E1B181FC0008DD39D /* XWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XWebView.framework; path = Combo/XWebView.framework; sourceTree = "<group>"; };
 		4497EC741A33BCA40056382A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44AAE64D1A33B30F00867903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44C233DA1853C8A7004544D2 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,10 +131,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448AA85C1B1E73CC0098FD05 /* XWebView.framework in Frameworks */,
+				448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */,
 				4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */,
 				44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */,
-				445F5B8C1B1A3AD800EAD8C9 /* XWebView.framework in Frameworks */,
-				4494E95A1B180F85008DD39D /* WebKit.framework in Frameworks */,
 				44C233E21853C8A7004544D2 /* UIKit.framework in Frameworks */,
 				44C233DE1853C8A7004544D2 /* Foundation.framework in Frameworks */,
 			);
@@ -196,12 +205,12 @@
 		44C233D11853C8A7004544D2 = {
 			isa = PBXGroup;
 			children = (
-				4494E94B1B180B07008DD39D /* XWebView.xcodeproj */,
 				441A412D1872F89E0023EC28 /* LICENSE */,
 				441A412E1872F89E0023EC28 /* README.md */,
 				441A40F51872ED100023EC28 /* Combo */,
 				44C233DC1853C8A7004544D2 /* Frameworks */,
 				44C233DB1853C8A7004544D2 /* Products */,
+				4494E94B1B180B07008DD39D /* XWebView.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,12 +225,12 @@
 		44C233DC1853C8A7004544D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				448AA85B1B1E73CC0098FD05 /* XWebView.framework */,
+				448AA8541B1E70610098FD05 /* WebKit.framework */,
 				4428A5391878A78B004D657F /* MessageUI.framework */,
 				44C233DD1853C8A7004544D2 /* Foundation.framework */,
 				44C233DF1853C8A7004544D2 /* CoreGraphics.framework */,
 				44C233E11853C8A7004544D2 /* UIKit.framework */,
-				4494E9591B180F85008DD39D /* WebKit.framework */,
-				4494E95E1B181FC0008DD39D /* XWebView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 			dependencies = (
 				4494E9551B180B20008DD39D /* PBXTargetDependency */,
 				445F5B8F1B1A3AD800EAD8C9 /* PBXTargetDependency */,
+				448AA85A1B1E70F30098FD05 /* PBXTargetDependency */,
 			);
 			name = Combo;
 			productName = SuperSet;
@@ -356,6 +366,11 @@
 			isa = PBXTargetDependency;
 			name = XWebView;
 			targetProxy = 445F5B8E1B1A3AD800EAD8C9 /* PBXContainerItemProxy */;
+		};
+		448AA85A1B1E70F30098FD05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XWebView;
+			targetProxy = 448AA8591B1E70F30098FD05 /* PBXContainerItemProxy */;
 		};
 		4494E9551B180B20008DD39D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -468,8 +483,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Combo",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
@@ -477,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -493,8 +512,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Combo",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
@@ -502,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-@import XWebView;
-
 #import "InfoViewController.h"
 #import "UIAlertView+Blocks.h"
 #import <MessageUI/MessageUI.h>
 #import <objc/message.h>
 #import <XWebView/XWebView-Swift.h>
+
+@import XWebView;
 
 @interface InfoViewController () <WKNavigationDelegate, MFMailComposeViewControllerDelegate>
 @end
@@ -23,21 +23,20 @@
 
     [super viewDidLoad];
 
-    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:config];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame];
     webView.navigationDelegate = self;
+    [self.view addSubview:webView];
 
-    // In Combo 1.2, we switched from the UIWebView class to the new, shiny WKWebView.
-    // Sadly, WKWebView currently lacks the ability to load local files on the device.
-    // XWebView, a Swift framework that extends WKWebView, contains a method that solves
-    // this problem. XWebView is a GitHub project: https://github.com/XWebView/XWebView
+    // In Combo 1.2, we switched from UIWebView to the new, shiny WKWebView.
+    // Sadly, WKWebView lacks the ability to load local files on the device.
+    // XWebView, a Swift framework that extends WKWebView, solves this problem.
+    // https://github.com/XWebView/XWebView
 
     SEL selector = NSSelectorFromString(@"loadFileURL:allowingReadAccessToURL:");
     if ([webView respondsToSelector:selector]) {
         NSURL *baseURL = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
         NSURL *directoryURL = [NSURL URLWithString:[baseURL.absoluteString stringByDeletingLastPathComponent]];
         [webView loadFileURL:baseURL allowingReadAccessToURL:directoryURL];
-        [self.view addSubview:webView];
     }
 }
 

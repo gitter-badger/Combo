@@ -55,8 +55,8 @@
 
     if (UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero)) {
         UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
-        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 30.0);
-        insets = UIEdgeInsetsMake(offset, offset, 0.0, offset);
+        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 80.0);
+        insets = UIEdgeInsetsMake(offset, offset, offset, offset);
     }
 
     return insets;

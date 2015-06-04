@@ -35,14 +35,14 @@
 
 - (UIEdgeInsets)insets {
     return [self collectionView:self.collectionView
-                        layout:self.collectionView.collectionViewLayout
-        insetForSectionAtIndex:0];
+                         layout:self.collectionView.collectionViewLayout
+         insetForSectionAtIndex:0];
 }
 
 - (CGSize)itemSize {
     return [self collectionView:self.collectionView
-                        layout:self.collectionView.collectionViewLayout
-        sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+                         layout:self.collectionView.collectionViewLayout
+         sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -55,7 +55,7 @@
 
     if (UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero)) {
         UIUserInterfaceSizeClass sizeClass = self.traitCollection.horizontalSizeClass;
-        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 15.0);
+        CGFloat offset = (sizeClass == UIUserInterfaceSizeClassCompact ? 10.0 : 30.0);
         insets = UIEdgeInsetsMake(offset, offset, 0.0, offset);
     }
 

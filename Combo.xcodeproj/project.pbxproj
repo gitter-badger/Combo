@@ -19,7 +19,6 @@
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
 		4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4428A5391878A78B004D657F /* MessageUI.framework */; };
-		44760AB51B1F330B004BDC7E /* XWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494E9511B180B07008DD39D /* XWebView.framework */; };
 		448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448AA8541B1E70610098FD05 /* WebKit.framework */; };
 		4497EC751A33BCA40056382A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4497EC741A33BCA40056382A /* Images.xcassets */; };
 		44AAE64E1A33B30F00867903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AAE64C1A33B30F00867903 /* Main.storyboard */; };
@@ -61,21 +60,14 @@
 			remoteGlobalIDString = AB023EA01A8C506600580A2A;
 			remoteInfo = XWebViewTests;
 		};
-		4494E9541B180B20008DD39D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4494E94B1B180B07008DD39D /* XWebView.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EE62683419FA323900EFC3F8;
-			remoteInfo = XWebView;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4494E9611B1820C2008DD39D /* CopyFiles */ = {
+		44F875521B1FE39800844AD5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			buildActionMask = 2147483647;
+			dstPath = ../Frameworks;
+			dstSubfolderSpec = 6;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44760AB51B1F330B004BDC7E /* XWebView.framework in Frameworks */,
 				448AA8551B1E70610098FD05 /* WebKit.framework in Frameworks */,
 				4428A53A1878A78B004D657F /* MessageUI.framework in Frameworks */,
 				44C233E01853C8A7004544D2 /* CoreGraphics.framework in Frameworks */,
@@ -251,12 +242,11 @@
 				44C233D61853C8A7004544D2 /* Sources */,
 				44C233D71853C8A7004544D2 /* Frameworks */,
 				44C233D81853C8A7004544D2 /* Resources */,
-				4494E9611B1820C2008DD39D /* CopyFiles */,
+				44F875521B1FE39800844AD5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4494E9551B180B20008DD39D /* PBXTargetDependency */,
 				445F5B8F1B1A3AD800EAD8C9 /* PBXTargetDependency */,
 				448AA85A1B1E70F30098FD05 /* PBXTargetDependency */,
 			);
@@ -368,11 +358,6 @@
 			name = XWebView;
 			targetProxy = 448AA8591B1E70F30098FD05 /* PBXContainerItemProxy */;
 		};
-		4494E9551B180B20008DD39D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XWebView;
-			targetProxy = 4494E9541B180B20008DD39D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -479,16 +464,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Combo",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -504,20 +485,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Combo",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Combo/Supporting Files/Combo-Prefix.pch";
 				INFOPLIST_FILE = "Combo/Supporting Files/Combo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

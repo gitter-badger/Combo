@@ -1,54 +1,72 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Combo by cmaynard</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Combo by cmaynard</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Combo</h1>
-        <p>A card matching game for iPhone</p>
+<link rel="stylesheet" href="stylesheets/styles.css">
+<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper">
+<header>
+<h1>Combo</h1>
+<p>A card matching game for iPhone and iPad</p>
 
-        <p class="view"><a href="https://github.com/cmaynard/combo">View the Project on GitHub <small>cmaynard/combo</small></a></p>
+<p class="view"><a href="https://github.com/cmaynard/Combo">View the Project on GitHub <small>cmaynard/Combo</small></a></p>
 
-      </header>
-      <section>
-        <h2>Welcome to Combo.</h2>
+</header>
 
-<p>Combo is a simple card-matching game for iPhone. You match three cards at a time until the deck runs out.</p>
+<section>
+<h2>Welcome to Combo!</h2>
 
-<p>The deck consists of 81 cards varying in four features: number (single, double, or triple); symbol (diamond, rectangle, oval); shading (dark, light, or none); and color (red, green, or blue). Each possible combination of features appears precisely once in the deck. Given any two cards from the deck, there will be one and only one other card that forms a set with them.</p>
+<p>Combo is a simple card-matching game. The basic idea is to match three cards at a time until the deck runs out.</p>
 
-<p>A set consists of three cards which satisfy all of these conditions:</p>
+<p>The deck consists of 81 cards. Each card has a unique geometric pattern. The patterns vary in four ways:</p>
 <ul>
-<li>They all have the same number, or they have three different numbers. 
-<li>They all have the same symbol, or they have three different symbols. 
-<li>They all have the same shading, or they have three different shadings. 
-<li>They all have the same color, or they have three different colors. 
+<li>Shape (diamond, rectangle, oval)
+<li>Count (one, two, or three)
+<li>Shading (dark, light, or none)
+<li>Color (red, green, or blue)
 </ul>
 
-<p>Useful hint: if you can't find a set, Combo will show you one if you swipe across the screen from left to right.
+<p>Given any two cards from the deck, there will be one and only one other card
+that forms a <b>set</b> with them. What is a set? A set consists of three cards which
+satisfy all of these conditions:</p>
+
+<ul>
+<li>All cards have the same shape, or they have three different shapes. 
+<li>All cards have the same count, or they have three different counts.
+<li>All cards use the same shading, or they have three different shadings.
+<li>All cards have the same color, or they have three different colors.
+</ul>
+
+<p>Combo displays 12 cards at a time. Your job is to find a set and tap on the
+three cards one at a time. If you are correct, Combo replaces them with three
+new cards from the deck. When the deck runs out and there are no more sets, the
+game is over.</p>
+
+<h4>Useful Hint</h4>
+
+<p>If you're stuck and can't find a set, Combo will show you one if you swipe across the screen from left to right.</p>
 
 <h3>Support</h3>
 
-<p>Having trouble using Combo? <a href="mailto:chmaynard@gmail.com">Contact the author</a> and we’ll help you sort it out.</p>
-      </section>
+<p>Having trouble using Combo? <a href="mailto:feedback@chmaynard.com">Send me an email</a> and I’ll help you sort it out.</p>
 
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/cmaynard">cmaynard</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</section>
+
+<footer>
+<p>This project is maintained by <a href="https://github.com/cmaynard">cmaynard</a></p>
+<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+</footer>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+
+</body>
 </html>

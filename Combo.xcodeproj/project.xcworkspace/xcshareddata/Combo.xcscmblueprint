@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "84D1484FB2CE9AFB09C12DF31B9108A98AE531A8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "84D1484FB2CE9AFB09C12DF31B9108A98AE531A8" : 0,
+    "77BCA865A4E419AEDEBECBDC9EFA3811D90E383D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "75FF26F3-3DEC-42EB-B5FB-517D61E82682",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "84D1484FB2CE9AFB09C12DF31B9108A98AE531A8" : "Combo\/",
+    "77BCA865A4E419AEDEBECBDC9EFA3811D90E383D" : "XWebView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Combo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Combo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cmaynard\/XWebView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77BCA865A4E419AEDEBECBDC9EFA3811D90E383D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cmaynard\/combo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "84D1484FB2CE9AFB09C12DF31B9108A98AE531A8"
+    }
+  ]
+}

@@ -1,22 +1,22 @@
 //
-//  SetGameViewController.m
+//  ComboViewController.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "SetGameViewController.h"
+#import "ComboViewController.h"
 #import "Card.h"
 #import "Combo.h"
 #import "ComboCard.h"
-#import "SetCardCollectionViewCell.h"
+#import "ComboCollectionViewCell.h"
 #import "ComboDeck.h"
 #import "UIAlertView+Blocks.h"
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ComboProtocol>
+@interface ComboViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ComboProtocol>
 
 @property (nonatomic, strong) Combo *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation SetGameViewController
+@implementation ComboViewController
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -161,7 +161,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 
 - (void)updateUI
 {
-    for (SetCardCollectionViewCell *cell in [self.collectionView visibleCells]) {
+    for (ComboCollectionViewCell *cell in [self.collectionView visibleCells]) {
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         ComboCard *card = [self.game cardAtIndex:indexPath.item];
         [self updateCell:cell usingCard:card];
@@ -180,14 +180,14 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SetCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Collection View Cell" forIndexPath:indexPath];
+    ComboCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Collection View Cell" forIndexPath:indexPath];
     ComboCard *card = [self.game cardAtIndex:indexPath.item];
     [self updateCell:cell usingCard:card];
 
     return cell;
 }
 
-- (void)updateCell:(SetCardCollectionViewCell *)cell usingCard:(ComboCard *)card
+- (void)updateCell:(ComboCollectionViewCell *)cell usingCard:(ComboCard *)card
 {
     cell.rank = card.rank;
     cell.shape = card.shape;
@@ -217,7 +217,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     }
 }
 
-- (void)startAnimatingCell:(SetCardCollectionViewCell *)cell
+- (void)startAnimatingCell:(ComboCollectionViewCell *)cell
 {
     if (cell.animating) return;
     cell.animating = YES;
@@ -236,7 +236,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
                      completion:NULL];
 }
 
-- (void)stopAnimatingCell:(SetCardCollectionViewCell *)cell
+- (void)stopAnimatingCell:(ComboCollectionViewCell *)cell
 {
     if (!cell.animating) return;
     cell.animating = NO;

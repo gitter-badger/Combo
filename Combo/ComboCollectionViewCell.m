@@ -1,14 +1,14 @@
 //
-//  SetCardCollectionViewCell.m
+//  ComboCollectionViewCell.m
 //  Combo
 //
 //  Created by Craig Maynard on 12/8/13.
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "SetCardCollectionViewCell.h"
+#import "ComboCollectionViewCell.h"
 
-@implementation SetCardCollectionViewCell
+@implementation ComboCollectionViewCell
 
 #pragma mark - Properties
 

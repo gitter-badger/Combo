@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Set Game View Controller-->
+        <!--Combo View Controller-->
         <scene sceneID="wkW-Vo-aXn">
             <objects>
-                <viewController id="Srb-0V-3CJ" customClass="SetGameViewController" sceneMemberID="viewController">
+                <viewController id="Srb-0V-3CJ" customClass="ComboViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0cZ-ku-v6L"/>
                         <viewControllerLayoutGuide type="bottom" id="dQG-yl-DUm"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Collection View Cell" id="vJx-pY-o6W" customClass="SetCardCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Collection View Cell" id="vJx-pY-o6W" customClass="ComboCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

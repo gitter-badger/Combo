@@ -27,10 +27,11 @@
     webView.navigationDelegate = self;
     [self.view addSubview:webView];
 
-    // In Combo 1.2, we switched from UIWebView to the new, shiny WKWebView.
-    // Sadly, WKWebView lacks the ability to load local files on the device.
-    // XWebView, a Swift framework that extends WKWebView, solves this problem.
-    // https://github.com/XWebView/XWebView
+    // In Combo 1.2, we switched from UIWebView to WKWebView to display the game rules.
+    // In iOS 8, WKWebView lacks the ability to load resource files stored inside the app bundle.
+    // XWebView, a Swift framework that extends WKWebView, solves this problem with a class
+    // extension that implements loadFileURL:allowingReadAccessToURL:.
+    // For details, see https://github.com/XWebView/XWebView
 
     SEL selector = NSSelectorFromString(@"loadFileURL:allowingReadAccessToURL:");
     if ([webView respondsToSelector:selector]) {

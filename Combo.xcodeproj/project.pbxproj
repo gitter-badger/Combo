@@ -13,8 +13,8 @@
 		441A411F1872ED100023EC28 /* ComboCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41051872ED100023EC28 /* ComboCard.m */; };
 		441A41201872ED100023EC28 /* ComboDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41071872ED100023EC28 /* ComboDeck.m */; };
 		441A41211872ED100023EC28 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* Combo.m */; };
-		441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */; };
-		441A41231872ED100023EC28 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetGameViewController.m */; };
+		441A41221872ED100023EC28 /* ComboCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410B1872ED100023EC28 /* ComboCollectionViewCell.m */; };
+		441A41231872ED100023EC28 /* ComboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* ComboViewController.m */; };
 		441A41251872ED100023EC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41121872ED100023EC28 /* AppDelegate.m */; };
 		441A41271872ED100023EC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41151872ED100023EC28 /* main.m */; };
 		441A41331874600E0023EC28 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41321874600E0023EC28 /* InfoViewController.m */; };
@@ -97,10 +97,10 @@
 		441A41071872ED100023EC28 /* ComboDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ComboDeck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41081872ED100023EC28 /* Combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Combo.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A41091872ED100023EC28 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Combo.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A410C1872ED100023EC28 /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A410D1872ED100023EC28 /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetGameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A410A1872ED100023EC28 /* ComboCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ComboCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A410B1872ED100023EC28 /* ComboCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ComboCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A410C1872ED100023EC28 /* ComboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ComboViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A410D1872ED100023EC28 /* ComboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ComboViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41111872ED100023EC28 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A41121872ED100023EC28 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41131872ED100023EC28 /* Combo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Combo-Info.plist"; sourceTree = "<group>"; };
@@ -151,10 +151,10 @@
 				441A40FF1872ED100023EC28 /* Model */,
 				441A41311874600E0023EC28 /* InfoViewController.h */,
 				441A41321874600E0023EC28 /* InfoViewController.m */,
-				441A410C1872ED100023EC28 /* SetGameViewController.h */,
-				441A410D1872ED100023EC28 /* SetGameViewController.m */,
-				441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */,
-				441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */,
+				441A410C1872ED100023EC28 /* ComboViewController.h */,
+				441A410D1872ED100023EC28 /* ComboViewController.m */,
+				441A410A1872ED100023EC28 /* ComboCollectionViewCell.h */,
+				441A410B1872ED100023EC28 /* ComboCollectionViewCell.m */,
 				441A41101872ED100023EC28 /* Supporting Files */,
 				44FF34A81A9E83040093508F /* HTML */,
 			);
@@ -348,8 +348,8 @@
 				441A411E1872ED100023EC28 /* Deck.m in Sources */,
 				441A41331874600E0023EC28 /* InfoViewController.m in Sources */,
 				441A41251872ED100023EC28 /* AppDelegate.m in Sources */,
-				441A41231872ED100023EC28 /* SetGameViewController.m in Sources */,
-				441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */,
+				441A41231872ED100023EC28 /* ComboViewController.m in Sources */,
+				441A41221872ED100023EC28 /* ComboCollectionViewCell.m in Sources */,
 				44FF34B71A9E845C0093508F /* UIAlertView+Blocks.m in Sources */,
 				441A41211872ED100023EC28 /* Combo.m in Sources */,
 				441A41201872ED100023EC28 /* ComboDeck.m in Sources */,

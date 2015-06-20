@@ -1,15 +1,15 @@
 //
-//  SetCardDeck.m
+//  ComboDeck.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "SetCardDeck.h"
+#import "ComboDeck.h"
 #import "ComboCard.h"
 
-@implementation SetCardDeck
+@implementation ComboDeck
 
 - (instancetype)init
 {
@@ -30,7 +30,7 @@
             }
         }
 
-        [[NSUserDefaults standardUserDefaults] setObject:cardDictArray forKey:@"SetCardDeck"];
+        [[NSUserDefaults standardUserDefaults] setObject:cardDictArray forKey:@"ComboDeck"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 

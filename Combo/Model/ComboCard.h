@@ -1,5 +1,5 @@
 //
-//  SetCard.h
+//  ComboCard.h
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.

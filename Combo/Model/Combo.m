@@ -1,18 +1,18 @@
 //
-//  SetGame.m
+//  Combo.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/16/13.
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "SetGame.h"
+#import "Combo.h"
 #import "ComboCard.h"
-#import "CardDeck.h"
+#import "Deck.h"
 
-@interface SetGame ()
+@interface Combo ()
 
-@property (nonatomic, strong) CardDeck *deck;
+@property (nonatomic, strong) Deck *deck;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, strong) NSMutableArray *cardsInPlay;
 @property (nonatomic, strong) NSMutableArray *chosenCards;
@@ -21,9 +21,9 @@
 
 @end
 
-@implementation SetGame
+@implementation Combo
 
-- (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck
+- (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(Deck *)deck
 {
     self = [super init];
 

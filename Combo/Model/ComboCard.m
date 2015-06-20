@@ -1,5 +1,5 @@
 //
-//  SetCard.m
+//  ComboCard.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/24/13.

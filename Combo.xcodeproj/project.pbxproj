@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		441A411B1872ED100023EC28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 441A40FC1872ED100023EC28 /* InfoPlist.strings */; };
 		441A411D1872ED100023EC28 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41011872ED100023EC28 /* Card.m */; };
-		441A411E1872ED100023EC28 /* CardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41031872ED100023EC28 /* CardDeck.m */; };
+		441A411E1872ED100023EC28 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41031872ED100023EC28 /* Deck.m */; };
 		441A411F1872ED100023EC28 /* ComboCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41051872ED100023EC28 /* ComboCard.m */; };
-		441A41201872ED100023EC28 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41071872ED100023EC28 /* SetCardDeck.m */; };
-		441A41211872ED100023EC28 /* SetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* SetGame.m */; };
+		441A41201872ED100023EC28 /* ComboDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41071872ED100023EC28 /* ComboDeck.m */; };
+		441A41211872ED100023EC28 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41091872ED100023EC28 /* Combo.m */; };
 		441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */; };
 		441A41231872ED100023EC28 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A410D1872ED100023EC28 /* SetGameViewController.m */; };
 		441A41251872ED100023EC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A41121872ED100023EC28 /* AppDelegate.m */; };
@@ -89,14 +89,14 @@
 		441A40FD1872ED100023EC28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		441A41001872ED100023EC28 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Card.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A41011872ED100023EC28 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Card.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A41021872ED100023EC28 /* CardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CardDeck.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A41031872ED100023EC28 /* CardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CardDeck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A41021872ED100023EC28 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Deck.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A41031872ED100023EC28 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Deck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A41041872ED100023EC28 /* ComboCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ComboCard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A41051872ED100023EC28 /* ComboCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ComboCard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A41061872ED100023EC28 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardDeck.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A41071872ED100023EC28 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardDeck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		441A41081872ED100023EC28 /* SetGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		441A41091872ED100023EC28 /* SetGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetGame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A41061872ED100023EC28 /* ComboDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ComboDeck.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A41071872ED100023EC28 /* ComboDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ComboDeck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		441A41081872ED100023EC28 /* Combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Combo.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		441A41091872ED100023EC28 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Combo.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410A1872ED100023EC28 /* SetCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetCardCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		441A410B1872ED100023EC28 /* SetCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetCardCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		441A410C1872ED100023EC28 /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SetGameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -166,14 +166,14 @@
 			children = (
 				441A41001872ED100023EC28 /* Card.h */,
 				441A41011872ED100023EC28 /* Card.m */,
-				441A41021872ED100023EC28 /* CardDeck.h */,
-				441A41031872ED100023EC28 /* CardDeck.m */,
+				441A41021872ED100023EC28 /* Deck.h */,
+				441A41031872ED100023EC28 /* Deck.m */,
 				441A41041872ED100023EC28 /* ComboCard.h */,
 				441A41051872ED100023EC28 /* ComboCard.m */,
-				441A41061872ED100023EC28 /* SetCardDeck.h */,
-				441A41071872ED100023EC28 /* SetCardDeck.m */,
-				441A41081872ED100023EC28 /* SetGame.h */,
-				441A41091872ED100023EC28 /* SetGame.m */,
+				441A41061872ED100023EC28 /* ComboDeck.h */,
+				441A41071872ED100023EC28 /* ComboDeck.m */,
+				441A41081872ED100023EC28 /* Combo.h */,
+				441A41091872ED100023EC28 /* Combo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,14 +345,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				441A41271872ED100023EC28 /* main.m in Sources */,
-				441A411E1872ED100023EC28 /* CardDeck.m in Sources */,
+				441A411E1872ED100023EC28 /* Deck.m in Sources */,
 				441A41331874600E0023EC28 /* InfoViewController.m in Sources */,
 				441A41251872ED100023EC28 /* AppDelegate.m in Sources */,
 				441A41231872ED100023EC28 /* SetGameViewController.m in Sources */,
 				441A41221872ED100023EC28 /* SetCardCollectionViewCell.m in Sources */,
 				44FF34B71A9E845C0093508F /* UIAlertView+Blocks.m in Sources */,
-				441A41211872ED100023EC28 /* SetGame.m in Sources */,
-				441A41201872ED100023EC28 /* SetCardDeck.m in Sources */,
+				441A41211872ED100023EC28 /* Combo.m in Sources */,
+				441A41201872ED100023EC28 /* ComboDeck.m in Sources */,
 				441A411D1872ED100023EC28 /* Card.m in Sources */,
 				441A411F1872ED100023EC28 /* ComboCard.m in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  CardDeck.h
+//  Deck.h
 //  Combo
 //
 //  Created by Craig Maynard on 11/16/13.
@@ -8,7 +8,7 @@
 
 @class Card;
 
-@interface CardDeck : NSObject
+@interface Deck : NSObject
 
 @property (nonatomic, strong) NSArray *cardDeck;
 

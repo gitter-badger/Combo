@@ -1,19 +1,19 @@
 //
-//  CardDeck.m
+//  Deck.m
 //  Combo
 //
 //  Created by Craig Maynard on 11/16/13.
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "CardDeck.h"
+#import "Deck.h"
 #import "Card.h"
 
-@interface CardDeck ()
+@interface Deck ()
 @property (nonatomic, strong) NSMutableArray *cards;
 @end
 
-@implementation CardDeck
+@implementation Deck
 
 - (Card *)cardAtIndex:(NSUInteger)index
 {

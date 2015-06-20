@@ -8,17 +8,17 @@
 
 #import "SetGameViewController.h"
 #import "Card.h"
-#import "SetGame.h"
+#import "Combo.h"
 #import "ComboCard.h"
 #import "SetCardCollectionViewCell.h"
-#import "SetCardDeck.h"
+#import "ComboDeck.h"
 #import "UIAlertView+Blocks.h"
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SetGameProtocol>
+@interface SetGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ComboProtocol>
 
-@property (nonatomic, strong) SetGame *game;
+@property (nonatomic, strong) Combo *game;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIProgressView *progressView;
 @property (nonatomic, assign) BOOL showHint;
@@ -149,14 +149,14 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 
 - (void)createGame
 {
-    self.game = [[SetGame alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
+    self.game = [[Combo alloc] initWithCardCount:12 usingCardDeck:[self createDeck]];
     self.game.delegate = self;
     [self updateUI];
 }
 
-- (CardDeck *)createDeck
+- (Deck *)createDeck
 {
-    return [[SetCardDeck alloc] init];
+    return [[ComboDeck alloc] init];
 }
 
 - (void)updateUI

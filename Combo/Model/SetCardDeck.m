@@ -7,7 +7,7 @@
 //
 
 #import "SetCardDeck.h"
-#import "SetCard.h"
+#import "ComboCard.h"
 
 @implementation SetCardDeck
 
@@ -18,12 +18,12 @@
     if (self) {
 
         NSMutableArray *cardDictArray = [NSMutableArray array];
-        for (int rank = 1; rank <= [SetCard maxRank]; rank++) {
-            for (NSString* shape in [SetCard validShapes]) {
-                for (NSString* color in [SetCard validColors]) {
-                    for (NSString* shading in [SetCard validShadings]) {
+        for (int rank = 1; rank <= [ComboCard maxRank]; rank++) {
+            for (NSString* shape in [ComboCard validShapes]) {
+                for (NSString* color in [ComboCard validColors]) {
+                    for (NSString* shading in [ComboCard validShadings]) {
                         NSDictionary *dict = @{ @"rank":[NSNumber numberWithInteger:rank], @"shape":shape, @"color":color, @"shading":shading };
-                        [self addCard:[[SetCard alloc] initWithDictionary:dict]];
+                        [self addCard:[[ComboCard alloc] initWithDictionary:dict]];
                         [cardDictArray addObject:dict];
                     }
                 }

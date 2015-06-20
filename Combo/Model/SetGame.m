@@ -7,7 +7,7 @@
 //
 
 #import "SetGame.h"
-#import "SetCard.h"
+#import "ComboCard.h"
 #import "CardDeck.h"
 
 @interface SetGame ()
@@ -139,7 +139,7 @@
             if ([self.chosenCards count] == 3) {
 
                 // check for match
-                success = [SetCard match:self.chosenCards];
+                success = [ComboCard match:self.chosenCards];
                 if (success) {
                     for (Card *chosenCard in self.chosenCards) {
                         chosenCard.matched = YES;
@@ -172,7 +172,7 @@
                 Card *card2 = self.cardsInPlay[j];
                 Card *card3 = self.cardsInPlay[k];
                 if (card1.isMatched || card2.isMatched || card3.isMatched) continue;
-                BOOL matched = [SetCard match:@[card1, card2, card3]];
+                BOOL matched = [ComboCard match:@[card1, card2, card3]];
                 if (matched) {
                     card1.canMatch = YES;
                     card2.canMatch = YES;

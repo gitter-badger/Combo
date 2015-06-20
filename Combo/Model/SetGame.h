@@ -6,7 +6,7 @@
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-@class SetCard, CardDeck;
+@class ComboCard, CardDeck;
 
 @protocol SetGameProtocol <NSObject>
 - (void) gameDidFinish;
@@ -20,7 +20,7 @@
 - (instancetype)initWithCardCount:(NSUInteger)count usingCardDeck:(CardDeck *)deck;
 
 - (BOOL)chooseCardAtIndex:(NSUInteger)index;
-- (SetCard *)cardAtIndex:(NSUInteger)index;
+- (ComboCard *)cardAtIndex:(NSUInteger)index;
 
 - (CGFloat)gameProgress;
 

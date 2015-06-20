@@ -6,12 +6,12 @@
 //  Copyright (c) 2014-2015 Craig Maynard. All rights reserved.
 //
 
-#import "SetCard.h"
+#import "ComboCard.h"
 
-@interface SetCard ()
+@interface ComboCard ()
 @end
 
-@implementation SetCard
+@implementation ComboCard
 
 @synthesize shape = _shape;
 
@@ -39,9 +39,9 @@
     int colorScore = 0;
     int shadingScore = 0;
 
-    SetCard *card1 = cards[0];
-    SetCard *card2 = cards[1];
-    SetCard *card3 = cards[2];
+    ComboCard *card1 = cards[0];
+    ComboCard *card2 = cards[1];
+    ComboCard *card3 = cards[2];
 
     if (card1.rank == card2.rank) { rankScore++; }
     if (card1.rank == card3.rank) { rankScore++; }
@@ -92,21 +92,21 @@
 
 - (void)setShape:(NSString *)shape
 {
-    if ([[SetCard validShapes] containsObject:shape]) {
+    if ([[ComboCard validShapes] containsObject:shape]) {
         _shape = shape;
     }
 }
 
 - (void) setColor:(NSString *)color
 {
-    if ([[SetCard validColors] containsObject:color]) {
+    if ([[ComboCard validColors] containsObject:color]) {
         _color = color;
     }
 }
 
 - (void) setShading:(NSString *)shading
 {
-    if ([[SetCard validShadings] containsObject:shading]) {
+    if ([[ComboCard validShadings] containsObject:shading]) {
         _shading = shading;
     }
 }

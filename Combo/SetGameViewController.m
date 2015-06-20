@@ -9,7 +9,7 @@
 #import "SetGameViewController.h"
 #import "Card.h"
 #import "SetGame.h"
-#import "SetCard.h"
+#import "ComboCard.h"
 #import "SetCardCollectionViewCell.h"
 #import "SetCardDeck.h"
 #import "UIAlertView+Blocks.h"
@@ -163,7 +163,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     for (SetCardCollectionViewCell *cell in [self.collectionView visibleCells]) {
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-        SetCard *card = [self.game cardAtIndex:indexPath.item];
+        ComboCard *card = [self.game cardAtIndex:indexPath.item];
         [self updateCell:cell usingCard:card];
     }
 
@@ -181,13 +181,13 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SetCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Collection View Cell" forIndexPath:indexPath];
-    SetCard *card = [self.game cardAtIndex:indexPath.item];
+    ComboCard *card = [self.game cardAtIndex:indexPath.item];
     [self updateCell:cell usingCard:card];
 
     return cell;
 }
 
-- (void)updateCell:(SetCardCollectionViewCell *)cell usingCard:(SetCard *)card
+- (void)updateCell:(SetCardCollectionViewCell *)cell usingCard:(ComboCard *)card
 {
     cell.rank = card.rank;
     cell.shape = card.shape;
